@@ -3,3 +3,14 @@
     max-width: 25%;
     border-radius: 10px;
 }
+
+.expLocation {
+    display: block;
+    float: right;
+    text-align: right;
+}
+
+.expTitle {
+    display: inline;
+    text-align: left;
+}
