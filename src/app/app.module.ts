@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { PhotographyComponent } from './photography/photography.component';
 import { DesignComponent } from './design/design.component';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { DesignComponent } from './design/design.component';
     AppComponent,
     HomepageComponent,
     PhotographyComponent,
-    DesignComponent
+    DesignComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
