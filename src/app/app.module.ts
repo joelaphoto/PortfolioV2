@@ -10,6 +10,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { PhotographyComponent } from './photography/photography.component';
 import { DesignComponent } from './design/design.component';
 import { AboutComponent } from './about/about.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { AboutComponent } from './about/about.component';
     HomepageComponent,
     PhotographyComponent,
     DesignComponent,
-    AboutComponent
+    AboutComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
