@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
-import { PhotographerComponent } from './photographer/photographer.component';
+import { PhotographyComponent } from './photography/photography.component';
 import { DesignComponent } from './design/design.component';
 
 
@@ -15,7 +15,7 @@ import { DesignComponent } from './design/design.component';
   declarations: [
     AppComponent,
     HomepageComponent,
-    PhotographerComponent,
+    PhotographyComponent,
     DesignComponent
   ],
   imports: [
