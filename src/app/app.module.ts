@@ -11,6 +11,7 @@ import { PhotographyComponent } from './photography/photography.component';
 import { DesignComponent } from './design/design.component';
 import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AdminComponent } from './admin/admin.component';
 
 export const firebaseConfig = {
   apiKey: config.apiKey,
@@ -26,7 +27,8 @@ export const firebaseConfig = {
     PhotographyComponent,
     DesignComponent,
     AboutComponent,
-    NavbarComponent
+    NavbarComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
