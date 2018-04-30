@@ -1,0 +1,13 @@
+.project-date {
+    display: inline;
+    float: right;
+}
+
+.project-name {
+    display: inline;
+}
+
+.project-img {
+    float: right;
+    max-width: 400px;
+}

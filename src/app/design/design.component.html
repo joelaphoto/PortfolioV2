@@ -1,3 +1,17 @@
-<p>
-  design works!
-</p>
+<div *ngFor="let project of projects | async">
+  <div class="card">
+    <div class="card-body">
+      <div class="card-title">
+        <h2 class="project-name">{{project.name}}</h2>
+        <h4 class="project-date">{{project.date}}</h4>
+      </div>
+      <div class="card-text">
+          <p><em>{{project.shortDesc}}</em></p>
+          <img class="project-img" src="{{project.imgUrl}}" alt="{{project.name}}">
+          <p>{{project.longDesc}}</p>
+          <a class="btn btn-info" href="{{project.link}}" target="_blank">View on Github</a>
+          
+      </div>
+    </div>
+  </div>
+</div>
