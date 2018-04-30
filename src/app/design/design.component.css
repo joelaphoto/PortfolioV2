@@ -8,6 +8,16 @@
 }
 
 .project-img {
-    float: right;
-    max-width: 400px;
+    max-width: 50%;
 }
+
+.card {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.project-desc {
+    margin-right: 10px;
+    padding-right: 10px;
+}
+
