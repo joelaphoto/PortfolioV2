@@ -5,6 +5,7 @@ import { DesignComponent } from './design/design.component'
 import { PhotographyComponent } from './photography/photography.component';
 import { AboutComponent } from './about/about.component';
 import { AdminComponent } from './admin/admin.component';
+import { AddProjectComponent } from './add-project/add-project.component';
 
 const appRoutes: Routes = [
   {
@@ -26,6 +27,10 @@ const appRoutes: Routes = [
   {
     path: 'Admin',
     component: AdminComponent
+  },
+  {
+    path: 'Add-Project',
+    component: AddProjectComponent
   }
 ];
 

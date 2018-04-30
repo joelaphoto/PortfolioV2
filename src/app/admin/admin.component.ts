@@ -13,6 +13,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
 export class AdminComponent implements OnInit {
 
   projects: FirebaseListObservable<any[]>;
+  isAddingProject: boolean = false;
 
   constructor(private projectService: ProjectService) {}
 
@@ -20,4 +21,17 @@ export class AdminComponent implements OnInit {
     this.projects = this.projectService.getProjects();
   }
 
+  deleteProject(project: Project){
+    if(confirm("Are you sure you want to delete this project?")){
+      this.projectService.deleteProject(project);
+    }
+  }
+
+  addingProject() {
+    if(this.isAddingProject) {
+      this.isAddingProject = false;
+    } else {
+      this.isAddingProject = true;
+    }
+  }
 }

@@ -5,7 +5,8 @@
     <div *ngIf="projects.length != 0">
         <h2>Projects</h2>
         <div *ngFor="let project of projects | async" class="card">
-            <h3>{{project.Name}}</h3>
+            <h3>{{project.name}}</h3>
+            <button class="btn btn-danger"(click)="deleteProject(project)">Delete</button>
         </div>
     </div>
 </div>
