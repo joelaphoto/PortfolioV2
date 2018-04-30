@@ -27,6 +27,7 @@ export class EditProjectComponent implements OnInit {
   updateProject() {
     if (confirm('Save changes to post?')) {
       this.projectService.updateProject(this.projectToEdit);
+      this.router.navigate(["Admin"])
     }
   }
 }
