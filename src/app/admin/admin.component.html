@@ -1,20 +1,28 @@
 <div>
-    <div *ngIf ="projects.length == 0 | async">
+    <div *ngIf="projects.length == 0 | async">
         <h2>No Projects to Display!</h2>
     </div>
     <div *ngIf="projects.length != 0">
         <h2>Projects</h2>
         <div *ngFor="let project of projects | async" class="card">
-            <h3 class="project-name">{{project.name}}</h3>
-            <h4 class="project-date">{{project.date}}</h4>
-            <p>{{project.shortDesc}}</p>
-            <button class="btn btn-danger"(click)="deleteProject(project)">Delete</button>
-            <button class="btn btn-info"(click)="editProject(project)">Edit</button>
+            <div class="card-body">
+                <div class="card-title">
+                    <h3 class="project-name">{{project.name}}</h3>
+                    <h4 class="project-date">{{project.date}}</h4>
+
+                </div>
+                <div class="card-text">
+                    <p>{{project.shortDesc}}</p>
+                    <button class="btn btn-danger" (click)="deleteProject(project)">Delete</button>
+                    <button class="btn btn-info" (click)="editProject(project)">Edit</button>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
 
 <button class="btn btn-info" (click)="addingProject()">Add Project</button>
 <div *ngIf="isAddingProject">
-   <app-add-project></app-add-project>
+    <app-add-project></app-add-project>
 </div>

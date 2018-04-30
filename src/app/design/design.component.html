@@ -7,11 +7,12 @@
       </div>
       <div class="card-text">
           <p><em>{{project.shortDesc}}</em></p>
-          <img class="project-img" src="{{project.imgUrl}}" alt="{{project.name}}">
+          <a href="{{project.link}}"><img class="project-img" src="{{project.imgUrl}}" alt="{{project.name}}"></a>
           <p>{{project.longDesc}}</p>
-          <a class="btn btn-info" href="{{project.link}}" target="_blank">View on Github</a>
-          
       </div>
+
+
     </div>
+    <a class="btn btn-info" href="{{project.link}}" target="_blank">View on Github</a> 
   </div>
 </div>

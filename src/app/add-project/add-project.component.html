@@ -25,10 +25,14 @@
         <input #newLink class="form-control">
       </div>
       <div class="form-group">
+          <label>Live Site Link</label>
+          <input #newLiveLink class="form-control">
+        </div>
+      <div class="form-group">
         <label>Project Image Link</label>
         <input #newImgUrl class="form-control">
       </div>
-      <button class="btn btn-info" (click)='submitProject( newName.value, newDate.value, newShortDesc.value, newLongDesc.value, newLink.value, newImgUrl.value)'>Add</button>
+      <button class="btn btn-info" (click)='submitProject( newName.value, newDate.value, newShortDesc.value, newLongDesc.value, newLink.value, newImgUrl.value, newLiveLink.value)'>Add</button>
     </div>
   </div>
 </div>
