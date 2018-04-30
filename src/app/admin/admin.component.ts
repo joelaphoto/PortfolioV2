@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProjectService } from '../services/project.service'
 import { Project } from '../models/project.model';
 import { FirebaseListObservable } from 'angularfire2/database';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin',
@@ -15,7 +16,7 @@ export class AdminComponent implements OnInit {
   projects: FirebaseListObservable<any[]>;
   isAddingProject: boolean = false;
 
-  constructor(private projectService: ProjectService) {}
+  constructor(private projectService: ProjectService, private router: Router) {}
 
   ngOnInit() {
     this.projects = this.projectService.getProjects();
@@ -25,6 +26,10 @@ export class AdminComponent implements OnInit {
     if(confirm("Are you sure you want to delete this project?")){
       this.projectService.deleteProject(project);
     }
+  }
+
+  editProject(project){
+    this.router.navigate(['Admin/Projects', project.$key])
   }
 
   addingProject() {

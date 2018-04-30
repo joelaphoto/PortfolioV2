@@ -6,6 +6,7 @@ import { PhotographyComponent } from './photography/photography.component';
 import { AboutComponent } from './about/about.component';
 import { AdminComponent } from './admin/admin.component';
 import { AddProjectComponent } from './add-project/add-project.component';
+import { EditProjectComponent } from './edit-project/edit-project.component';
 
 const appRoutes: Routes = [
   {
@@ -29,8 +30,8 @@ const appRoutes: Routes = [
     component: AdminComponent
   },
   {
-    path: 'Add-Project',
-    component: AddProjectComponent
+    path: 'Admin/Projects/:id',
+    component:EditProjectComponent
   }
 ];
 
