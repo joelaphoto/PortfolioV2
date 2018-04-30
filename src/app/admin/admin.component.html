@@ -1,3 +1,16 @@
-<p>
-  admin works!
-</p>
+<div>
+    <div *ngIf ="projects.length == 0 | async">
+        <h2>No Projects to Display!</h2>
+    </div>
+    <div *ngIf="projects.length != 0">
+        <h2>Projects</h2>
+        <div *ngFor="let project of projects | async" class="card">
+            <h3>{{project.Name}}</h3>
+        </div>
+    </div>
+</div>
+
+<button class="btn btn-info" (click)="addingProject()">Add Project</button>
+<div *ngIf="isAddingProject">
+   <app-add-project></app-add-project>
+</div>

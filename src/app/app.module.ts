@@ -12,6 +12,7 @@ import { DesignComponent } from './design/design.component';
 import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AdminComponent } from './admin/admin.component';
+import { AddProjectComponent } from './add-project/add-project.component';
 
 export const firebaseConfig = {
   apiKey: config.apiKey,
@@ -28,7 +29,8 @@ export const firebaseConfig = {
     DesignComponent,
     AboutComponent,
     NavbarComponent,
-    AdminComponent
+    AdminComponent,
+    AddProjectComponent
   ],
   imports: [
     BrowserModule,
