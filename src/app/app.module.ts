@@ -14,6 +14,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AdminComponent } from './admin/admin.component';
 import { AddProjectComponent } from './add-project/add-project.component';
 import { EditProjectComponent } from './edit-project/edit-project.component';
+import { LoginComponent } from './login/login.component';
+import { PhotoDetailComponent } from './photo-detail/photo-detail.component';
 
 export const firebaseConfig = {
   apiKey: config.apiKey,
@@ -32,7 +34,9 @@ export const firebaseConfig = {
     NavbarComponent,
     AdminComponent,
     AddProjectComponent,
-    EditProjectComponent
+    EditProjectComponent,
+    LoginComponent,
+    PhotoDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,9 @@
-<p>
-  photography works!
-</p>
+<div class="row">
+  <ul id='thumbs'>
+    <li *ngFor='let image of images | async' class='img'>
+      <a [routerLink]="['/Photo', image.$key]">
+      <img src='{{image.url}}' class="thumb">
+      </a>
+    </li>
+  </ul>
+</div>

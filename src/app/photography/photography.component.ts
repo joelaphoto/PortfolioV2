@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { ImageService } from '../services/image.service';
 import { Observable } from 'rxjs/Observable';
 import { GalleryImage } from '../models/gallery-image.model';
@@ -9,7 +9,7 @@ import { GalleryImage } from '../models/gallery-image.model';
   styleUrls: ['./photography.component.css'],
   providers: [ImageService]
 })
-export class PhotographyComponent implements OnInit {
+export class PhotographyComponent implements OnInit, OnChanges {
 
   images: Observable<GalleryImage[]>;
 
@@ -19,4 +19,7 @@ export class PhotographyComponent implements OnInit {
     this.images = this.imageService.getImages();
   }
 
+  ngOnChanges() {
+    this.images = this.imageService.getImages(); 
+  }
 }
