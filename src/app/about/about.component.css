@@ -49,3 +49,16 @@ h1 {
     margin-bottom: 20px;
     border-style: none;
 }
+
+.card-title{
+    font-family: "bebas-neue";
+    font-size: 40px;
+}
+
+.card-text {
+    font-family: 'roboto-condensed'
+}
+
+.boldText, h6 {
+    font-weight: 700;
+}
