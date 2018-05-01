@@ -1,21 +1,34 @@
-<nav class="navbar navbar-expand-sm navbar-light bg-light">
+<nav class="navbar navbar-expand navbar-light bg-light">
   <div class="navbar-header">
     <a class="navbar-brand abs" routerLink="">
-      Home
+      Joel Adams
     </a>
   </div>
-  <ul class="navbar-nav ml-auto">
-    <li class="nav-item">
-      <a class="nav-link" routerLink='About'>About</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink='Photography'>Photography</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink='Design'>Design</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink='Admin'>Admin</a>
+  <ul class="navbar-nav">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false">
+        Menu
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <div class="nav-item">
+          <a class="dropdown-item" routerLink='About'>About</a>
+
+        </div>
+        <div class="nav-item">
+          <a class="dropdown-item" routerLink='About'>Photography</a>
+
+        </div>
+        <div class="nav-item">
+          <a class="dropdown-item" routerLink='About'>Design</a>
+
+        </div>
+        <div class="nav-item">
+          <a class="dropdown-item" routerLink='About'>Admin</a>
+
+        </div>
+
+      </div>
     </li>
   </ul>
 </nav>

@@ -4,6 +4,15 @@
     border-radius: 10px;
 }
 
+#header {
+    max-width: 75%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
 .expLocation {
     display: block;
     float: right;
@@ -13,4 +22,25 @@
 .expTitle {
     display: inline;
     text-align: left;
+}
+
+h1 {
+    font-family: "bebas-neue";
+    color: white;
+    text-align: center;
+    font-size: 200px;
+    margin-bottom: -40px;
+    padding-bottom: -10px;
+}
+
+#subHead {
+    font-family: "roboto-condensed";
+    color: white;
+    text-align: center;
+    font-size: 45px;
+    font-weight: lighter;
+}
+
+.redLine {
+    color: red;
 }
