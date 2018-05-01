@@ -16,6 +16,12 @@ import { AddProjectComponent } from './add-project/add-project.component';
 import { EditProjectComponent } from './edit-project/edit-project.component';
 import { LoginComponent } from './login/login.component';
 import { PhotoDetailComponent } from './photo-detail/photo-detail.component';
+import { AuthenticationService } from './services/authentication.service';
+import { AuthGuard } from './services/authguard.service'
+import { ImageService } from './services/image.service';
+import { UploadService } from './services/upload.service';
+import { ProjectService } from './services/project.service';
+import { AngularFireAuth } from 'angularfire2/auth';
 
 export const firebaseConfig = {
   apiKey: config.apiKey,
@@ -43,9 +49,10 @@ export const firebaseConfig = {
     FormsModule,
     routing,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AngularFireAuth
   ],
-  providers: [],
+  providers: [AuthGuard, AuthenticationService, ImageService, UploadService, ProjectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

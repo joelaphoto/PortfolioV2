@@ -8,6 +8,8 @@ import { AdminComponent } from './admin/admin.component';
 import { AddProjectComponent } from './add-project/add-project.component';
 import { EditProjectComponent } from './edit-project/edit-project.component';
 import { LoginComponent } from './login/login.component';
+import { PhotoDetailComponent } from './photo-detail/photo-detail.component';
+import { AuthGuard } from './services/authguard.service'
 
 const appRoutes: Routes = [
   {
@@ -28,15 +30,21 @@ const appRoutes: Routes = [
   },
   {
     path: 'Admin',
-    component: AdminComponent
+    component: AdminComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'Admin/Projects/:id',
-    component: EditProjectComponent
+    component: EditProjectComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'LogIn',
     component: LoginComponent
+  },
+  {
+    path: 'Photography/Photo/:id',
+    component: PhotoDetailComponent
   }
 ];
 
