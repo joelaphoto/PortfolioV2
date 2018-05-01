@@ -8,7 +8,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { PhotographyComponent } from './photography/photography.component';
-import { DesignComponent } from './design/design.component';
+import { DevelopmentComponent } from './development/development.component';
 import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AdminComponent } from './admin/admin.component';
@@ -27,7 +27,7 @@ export const firebaseConfig = {
     AppComponent,
     HomepageComponent,
     PhotographyComponent,
-    DesignComponent,
+    DevelopmentComponent,
     AboutComponent,
     NavbarComponent,
     AdminComponent,

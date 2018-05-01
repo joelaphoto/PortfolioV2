@@ -44,3 +44,8 @@ h1 {
 .redLine {
     color: red;
 }
+
+.card {
+    margin-bottom: 20px;
+    border-style: none;
+}

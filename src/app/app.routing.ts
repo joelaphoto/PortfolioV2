@@ -1,7 +1,7 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomepageComponent } from './homepage/homepage.component'
-import { DesignComponent } from './design/design.component'
+import { DevelopmentComponent } from './development/development.component'
 import { PhotographyComponent } from './photography/photography.component';
 import { AboutComponent } from './about/about.component';
 import { AdminComponent } from './admin/admin.component';
@@ -14,8 +14,8 @@ const appRoutes: Routes = [
     component: HomepageComponent
   },
   {
-    path: 'Design',
-    component: DesignComponent
+    path: 'Development',
+    component: DevelopmentComponent
   },
   {
     path: 'Photography',
@@ -31,7 +31,7 @@ const appRoutes: Routes = [
   },
   {
     path: 'Admin/Projects/:id',
-    component:EditProjectComponent
+    component: EditProjectComponent
   }
 ];
 

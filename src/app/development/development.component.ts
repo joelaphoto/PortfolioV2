@@ -6,12 +6,12 @@ import { DomSanitizer } from '@angular/platform-browser';
  
 
 @Component({
-  selector: 'app-design',
-  templateUrl: './design.component.html',
-  styleUrls: ['./design.component.css'],
+  selector: 'app-Development',
+  templateUrl: './development.component.html',
+  styleUrls: ['./development.component.css'],
   providers: [ProjectService]
 })
-export class DesignComponent implements OnInit {
+export class DevelopmentComponent implements OnInit {
   projects: FirebaseListObservable<any[]>;
 
   constructor(private projectService: ProjectService, private router: Router, private sanitizer: DomSanitizer) { }

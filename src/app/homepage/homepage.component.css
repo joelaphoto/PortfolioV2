@@ -1,0 +1,13 @@
+#header {
+    max-width: 100%;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    width: 100%;
+    font-family: 'bebas-neue';
+    font-size: 2.5vw;
+    background-color: red;
+    border-radius: 0;
+}
