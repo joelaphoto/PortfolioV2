@@ -1,3 +1,6 @@
+body {
+    font-family: 'roboto-condensed'
+}
 .project-date {
     display: inline;
     float: right;
@@ -8,7 +11,7 @@
 }
 
 .project-img {
-    max-width: 50%;
+    max-width: 100%;
 }
 
 @media only screen and (max-width: 720px) {
@@ -22,8 +25,23 @@
     margin-top: 10px;
 }
 
+.card-title {
+    font-family: 'bebas-neue'
+}
+
 .project-desc {
     margin-right: 10px;
     padding-right: 10px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+.btn {
+    width: 100%;
+    font-size: 40px;
+    font-family: 'bebas-neue';
+    background-color: red;
 }
 

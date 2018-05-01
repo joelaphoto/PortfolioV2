@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ProjectService } from '../services/project.service';
 import { FirebaseListObservable } from 'angularfire2/database';
 import { Router } from '@angular/router';
-import { DomSanitizer } from '@angular/platform-browser';
  
 
 @Component({
@@ -14,13 +13,18 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class DevelopmentComponent implements OnInit {
   projects: FirebaseListObservable<any[]>;
 
-  constructor(private projectService: ProjectService, private router: Router, private sanitizer: DomSanitizer) { }
+  constructor(private projectService: ProjectService, private router: Router) { }
 
   ngOnInit() {
     this.projects = this.projectService.getProjects();
   }
 
-  sanitize(url:string){
-    return this.sanitizer.bypassSecurityTrustUrl(url);
+  changeDate(dateString) {
+    console.log(dateString)
+    const year = dateString.slice(0,4)
+    const month = dateString.slice(5,7)
+    const day = dateString.slice(8,10)
+    const formattedString = 'Start Date: ' + month + '/' + day + '/' + year;
+    return formattedString
   }
 }
