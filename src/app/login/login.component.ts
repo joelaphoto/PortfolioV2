@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../services/authentication.service';
 import { Router } from '@angular/router';
-import { resolve } from 'path';
+import { User } from '../models/user.model';
 
 @Component({
   selector: 'app-login',
@@ -10,14 +10,13 @@ import { resolve } from 'path';
 })
 export class LoginComponent {
 
-  email: string;
-  password: string;
   error: string;
 
   constructor(private authService: AuthenticationService, private router: Router) { }
 
-  signIn() {
-    this.authService.login({email: this.email, password: this.password})
+  signIn(userEmail: string, userPassword: string) {
+    let newUser = new User(userEmail, userPassword);
+    this.authService.login(newUser)
     .then(resolve => this.router.navigate(['Admin']))
     .catch(error => this.error = error.message);
   }

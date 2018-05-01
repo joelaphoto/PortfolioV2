@@ -8,21 +8,26 @@
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
         <div class="nav-item">
           <a class="dropdown-item" routerLink='/About'>About</a>
-
         </div>
         <div class="nav-item">
           <a class="dropdown-item" routerLink='/Photography'>Photography</a>
-
         </div>
         <div class="nav-item">
           <a class="dropdown-item" routerLink='/Development'>Development</a>
-
+        </div> 
+        <div *ngIf='!(user|async)?.uid'>
+          <div class="nav-item">
+            <a class="dropdown-item" routerLink='/LogIn'>Log In</a>
+          </div>
         </div>
-        <div class="nav-item">
-          <a class="dropdown-item" routerLink='/Admin'>Admin</a>
-
+        <div *ngIf='(user|async)?.uid'>
+          <div class="nav-item">
+            <a class="dropdown-item" routerLink='/Admin'>Admin</a>
+          </div>
+          <div class="nav-item">
+            <a class="dropdown-item" (click)="logOut()">Log Out</a>
+          </div>
         </div>
-
       </div>
     </li>
   </ul>
