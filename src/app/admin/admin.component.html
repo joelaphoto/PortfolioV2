@@ -14,7 +14,7 @@
                 <div class="card-text">
                     <p>{{project.shortDesc}}</p>
                     <button class="btn btn-danger" (click)="deleteProject(project)">Delete</button>
-                    <button class="btn btn-info" (click)="editProject(project)">Edit</button>
+                    <button class="btn btn-info" (click)="editProject(project.$key)">Edit</button>
                 </div>
             </div>
 

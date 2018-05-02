@@ -4,28 +4,17 @@
       <h2>Admin Login</h2>
     </div>
     <div class="card-text">
-      <form #loginForm="ngForm">
-        <h1 class="login-title">Log In</h1>
+      <form name="login-form">
         <div class="form-group">
           <label>Email</label>
-          <input class="form-control"
-            #emailControl="ngModel"
-            placeholder="Email"
-            [(ngModel)]="email"
-            name="email" maxlength="70" email required>
+          <input #userEmail class="form-control"  placeholder="Enter Email" name="email" required>
         </div>
         <div class="form-group">
-          <label>Password</label>
-          <input class="form-control"
-          #passwordControl="ngModel"
-          placeholder="Password"
-          [(ngModel)]="password"
-          name="password" maxlength="70" type="password" required>
+          <input #userPassword type="password" class="form-control"  placeholder="Password" required>
         </div>
-        <button [disabled]="!loginForm.form.valid" type="submit" class="btn btn-info btn-lg"
-          (click)="signIn()">Sign In</button>
-          <p *ngIf="msg" class="text-danger">{{msg}}</p>
+        <button class="btn btn-info" type="submit"(click)="signIn(userPassword.value, userEmail.value)">Log In</button>
       </form>
+      <p *ngIf='msg' class="text-danger">{{msg}}</p>
     </div>
   </div>
 </div>
