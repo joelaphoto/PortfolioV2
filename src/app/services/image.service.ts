@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import 'firebase/storage';
 import { GalleryImage } from '../models/gallery-image.model';
 import * as firebase from 'firebase';
@@ -18,7 +18,7 @@ export class ImageService {
     });
    }
    
-   getImages(): Observable<GalleryImage[]>{
+   getImages(): AngularFireList<GalleryImage[]>{
      return this.database.list('uploads');
    }
 }

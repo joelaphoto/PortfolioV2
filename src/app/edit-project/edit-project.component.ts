@@ -19,7 +19,7 @@ export class EditProjectComponent implements OnInit {
     this.route.params.forEach((urlParameters) => {
      this.postId = urlParameters['id'];
    });
-   this.projectToEdit = this.projectService.getProjectById(this.postId).subscribe(dataLastEmittedFromObserver => {
+   this.projectToEdit = this.projectService.getProjectById(this.postId).snapshotChanges().subscribe(dataLastEmittedFromObserver => {
      this.projectToEdit = dataLastEmittedFromObserver;
     });
   }

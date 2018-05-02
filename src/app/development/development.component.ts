@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectService } from '../services/project.service';
-import { FirebaseListObservable } from 'angularfire2/database';
+import { AngularFireList } from 'angularfire2/database';
 import { Router } from '@angular/router';
  
 
@@ -11,16 +11,15 @@ import { Router } from '@angular/router';
   providers: [ProjectService]
 })
 export class DevelopmentComponent implements OnInit {
-  projects: FirebaseListObservable<any[]>;
+  projects;
 
   constructor(private projectService: ProjectService, private router: Router) { }
 
   ngOnInit() {
-    this.projects = this.projectService.getProjects();
+    this.projects = this.projectService.getProjects().valueChanges()
   }
 
   changeDate(dateString) {
-    console.log(dateString)
     const year = dateString.slice(0,4)
     const month = dateString.slice(5,7)
     const day = dateString.slice(8,10)

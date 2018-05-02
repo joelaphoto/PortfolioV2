@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectService } from '../services/project.service'
 import { Project } from '../models/project.model';
-import { FirebaseListObservable } from 'angularfire2/database';
+import { AngularFireList } from 'angularfire2/database';
 import { Router } from '@angular/router';
 
 @Component({
@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 
 export class AdminComponent implements OnInit {
 
-  projects: FirebaseListObservable<any[]>;
+  projects: AngularFireList<any[]>;
   isAddingProject: boolean = false;
 
   constructor(private projectService: ProjectService, private router: Router) {}
