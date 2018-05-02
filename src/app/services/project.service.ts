@@ -1,10 +1,10 @@
 import { Injectable, Inject } from '@angular/core';
 import { Project } from '../models/project.model';
-import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Injectable()
 export class ProjectService {
-    projects: AngularFireList<Project[]>;
+    projects: FirebaseListObservable<any[]>;
 
     constructor(private database: AngularFireDatabase) {
         this.projects = database.list('projects')
@@ -14,7 +14,7 @@ export class ProjectService {
         return this.projects;
     }
 
-    addProject(newProject) {
+    addProject(newProject: Project) {
         this.projects.push(newProject);
     }
 

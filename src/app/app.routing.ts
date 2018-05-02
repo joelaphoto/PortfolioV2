@@ -10,7 +10,6 @@ import { EditProjectComponent } from './edit-project/edit-project.component';
 import { LoginComponent } from './login/login.component';
 import { PhotoDetailComponent } from './photo-detail/photo-detail.component';
 import { AuthGuard } from './services/authguard.service'
-import { UploadComponent } from './upload/upload.component';
 
 const appRoutes: Routes = [
   {
@@ -46,11 +45,6 @@ const appRoutes: Routes = [
   {
     path: 'Photography/Photo/:id',
     component: PhotoDetailComponent
-  },
-  {
-    path: 'Admin/Upload',
-    component: UploadComponent,
-    canActivate: [AuthGuard]
   }
 ];
 

@@ -22,7 +22,6 @@ import { ImageService } from './services/image.service';
 import { UploadService } from './services/upload.service';
 import { ProjectService } from './services/project.service';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { UploadComponent } from './upload/upload.component';
 
 export const firebaseConfig = {
   apiKey: config.apiKey,
@@ -43,8 +42,7 @@ export const firebaseConfig = {
     AddProjectComponent,
     EditProjectComponent,
     LoginComponent,
-    PhotoDetailComponent,
-    UploadComponent
+    PhotoDetailComponent
   ],
   imports: [
     BrowserModule,
