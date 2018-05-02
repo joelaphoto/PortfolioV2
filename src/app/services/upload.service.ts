@@ -20,6 +20,7 @@ export class UploadService {
     uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED,
     (snapshot) => {
       upload.progress = (uploadTask.snapshot.bytesTransferred / uploadTask.snapshot.totalBytes) * 100;
+      console.log(upload.progress);
     },
 
     (error) => {

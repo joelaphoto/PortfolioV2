@@ -3,7 +3,6 @@ import { ProjectService } from '../services/project.service'
 import { Project } from '../models/project.model';
 import { AngularFireList } from 'angularfire2/database';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs/ob'
 
 @Component({
   selector: 'app-admin',
@@ -14,15 +13,13 @@ import { Observable } from 'rxjs/ob'
 
 export class AdminComponent implements OnInit {
 
-  projects;
+  projects: AngularFireList<any[]>;
   isAddingProject: boolean = false;
 
   constructor(private projectService: ProjectService, private router: Router) {}
 
   ngOnInit() {
-    this.projects = this.projectService.getProjects().snapshotChanges().map(actions => {
-    return actions.map(action => ({key: action.key, action.payload.val()}))
-  }).subscribe(projects => projects.keys);
+    this.projects = this.projectService.getProjects();
   }
 
   deleteProject(project: Project){
@@ -31,8 +28,8 @@ export class AdminComponent implements OnInit {
     }
   }
 
-  editProject(key: string){
-    this.router.navigate(['Admin/Projects', key])
+  editProject(project){
+    this.router.navigate(['Admin/Projects', project.$key])
   }
 
   addingProject() {
