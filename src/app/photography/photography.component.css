@@ -1,7 +1,33 @@
 .btn {
+    margin-top: 20px;
     width: 100%;
     font-family: 'bebas-neue';
     font-size: 2.5vw;
     background-color: red;
     border-radius: 0;
 }
+
+.btn-danger {
+    color: black;
+    background-color: white;
+}
+
+ul { 
+    padding:0; 
+    width:100%; 
+    columns: 3;
+    list-style: none;
+}
+
+.thumb {
+  margin:6px 6px;
+  border: 0.5% solid #eee;
+  box-shadow:#555 1px 1px 8px 1px;
+  cursor: pointer;
+  width: 100%;
+}
+
+h2{
+  margin-bottom: 20px;
+}
+

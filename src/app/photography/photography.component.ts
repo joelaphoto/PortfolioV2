@@ -46,6 +46,30 @@ export class PhotographyComponent implements OnInit, OnChanges {
     this.showPortrait = false;
   }
 
+  isPortraitActive() {
+    if(this.showPortrait === true){
+      return "red";
+    } else {
+      return "white"
+    }
+  }
+
+  isProductActive() {
+    if(this.showProduct === true){
+      return "red";
+    } else {
+      return "white"
+    }
+  }
+
+  isEventActive() {
+    if(this.showEvent === true){
+      return "red";
+    } else {
+      return "white"
+    }
+  }
+
 
 
   display(image) {
