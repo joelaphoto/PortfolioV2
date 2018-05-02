@@ -7,6 +7,7 @@ export class Upload {
     name: string;
     description: string;
     title: string;
+    category: string;
   
     constructor(file: File) {
       this.file = file;
