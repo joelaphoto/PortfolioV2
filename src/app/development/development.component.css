@@ -1,10 +1,6 @@
 body {
     font-family: 'roboto-condensed'
 }
-.project-date {
-    display: inline;
-    float: right;
-}
 
 .project-name {
     display: inline;
@@ -12,12 +8,6 @@ body {
 
 .project-img {
     max-width: 100%;
-}
-
-@media only screen and (max-width: 720px) {
-    body {
-        max-width: 100%;
-    }
 }
 
 .card {

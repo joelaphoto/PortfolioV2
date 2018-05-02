@@ -16,7 +16,7 @@ export class DevelopmentComponent implements OnInit {
   constructor(private projectService: ProjectService, private router: Router) { }
 
   ngOnInit() {
-    this.projects = this.projectService.getProjects().valueChanges()
+    this.projects = this.projectService.getProjects().valueChanges();
   }
 
   changeDate(dateString) {
