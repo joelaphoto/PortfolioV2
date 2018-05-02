@@ -1,9 +1,25 @@
 <div class="row">
+  <div class="col-md-4">
+    <button class="btn btn-danger" (click)="viewPortrait()">Portrait</button>
+  </div>
+  <div class="col-md-4">
+    <button class="btn btn-danger" (click)="viewEvent()">Event</button>
+  </div>
+  <div class="col-md-4">
+    <button class="btn btn-danger" (click)="viewProduct()">Product</button>
+  </div>
+</div>
+<div class="row">
   <ul id='thumbs'>
-    <li *ngFor='let image of images | async' class='img'>
-      <a [routerLink]="['/Photo', image.$key]">
-      <img src='{{image.url}}' class="thumb">
-      </a>
-    </li>
+    <div *ngFor='let image of images | async'>
+      <div *ngIf='display(image)'>
+        <li class='img'>
+          <a [routerLink]="['/Photo', image.$key]">
+            <img src='{{image.url}}' class="thumb">
+          </a>
+        </li>
+      </div>
+    </div>
+
   </ul>
 </div>
