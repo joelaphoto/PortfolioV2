@@ -14,12 +14,11 @@
     <div *ngFor='let image of images | async'>
       <div *ngIf='display(image)'>
         <li class='img'>
-          <a [routerLink]="['/Photo', image.$key]">
+          <a [routerLink]="['Photo', image.$key]">
             <img src='{{image.url}}' class="thumb">
           </a>
         </li>
       </div>
     </div>
-
   </ul>
 </div>

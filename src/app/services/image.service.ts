@@ -21,4 +21,9 @@ export class ImageService {
    getImages(): Observable<GalleryImage[]>{
      return this.database.list('uploads');
    }
+
+   getImage(key: string){
+    return firebase.database().ref('uploads/' + key).once('value')
+    .then((snap) => snap.val());
+  }
 }
