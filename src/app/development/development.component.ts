@@ -16,11 +16,7 @@ export class DevelopmentComponent implements OnInit {
   constructor(private projectService: ProjectService, private router: Router) { }
 
   ngOnInit() {
-<<<<<<< HEAD
-    this.projects = this.projectService.getProjects().valueChanges();
-=======
     this.projects = this.projectService.getProjects();
->>>>>>> parent of 97ae212... add upload component, upload service, upload form, update to AngularFire 5.0.0
   }
 
   changeDate(dateString) {
