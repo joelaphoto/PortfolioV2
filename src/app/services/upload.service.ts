@@ -34,6 +34,12 @@ export class UploadService {
     }
   );
 }
+
+deleteFile(name) {
+  const storageRef = firebase.storage().ref();
+  const imgRef = storageRef.child('uploads/' + name);
+  imgRef.delete()
+}
   private saveFileData(upload: Upload) {
     this.db.list(`${this.basePath}/`).push(upload);
     console.log("Files Saved: " + upload.url)
