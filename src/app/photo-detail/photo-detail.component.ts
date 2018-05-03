@@ -17,7 +17,7 @@ export class PhotoDetailComponent implements OnInit {
 
   constructor(private imageService: ImageService, private route: ActivatedRoute) { }
 
-  getImageUrl(key: string){
+  getImageUrl(key: string) {
     this.imageService.getImage(key)
       .then(image => this.imageUrl = image.url);
   }
@@ -26,6 +26,7 @@ export class PhotoDetailComponent implements OnInit {
     this.imageService.getImage(key)
     .then(title => this.title = title.title)
   }
+
   getImageDescription(key: string) {
     this.imageService.getImage(key)
     .then(description => this.description = description.description)
