@@ -12,7 +12,7 @@
 <div class="row">
 <div id='thumbs'>
   <ul>
-    <div *ngFor='let image of images | async'>
+    <div *ngFor='let image of images | shuffle'>
       <div *ngIf='display(image)'>
         <li class='img'>
           <a [routerLink]="['Photo', image.$key]">

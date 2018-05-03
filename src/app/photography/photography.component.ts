@@ -3,6 +3,7 @@ import { ImageService } from '../services/image.service';
 import { Observable } from 'rxjs/Observable';
 import { GalleryImage } from '../models/gallery-image.model';
 import { Upload } from '../models/upload.model';
+import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-photography',
@@ -16,16 +17,20 @@ export class PhotographyComponent implements OnInit, OnChanges {
   showEvent: boolean = false;
   showProduct: boolean = false;
 
-  images: Observable<GalleryImage[]>;
+  images: Upload[];
 
   constructor(private imageService: ImageService) { }
 
   ngOnInit() {
-    this.images = this.imageService.getImages();
+    this.imageService.getImages().subscribe(data => {
+      this.images = data;
+    });
   }
 
   ngOnChanges() {
-    this.images = this.imageService.getImages();
+    this.imageService.getImages().subscribe(data => {
+      this.images = data;
+    });
   }
 
   viewPortrait() {
