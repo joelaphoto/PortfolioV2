@@ -40,11 +40,6 @@ const appRoutes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'Admin/Upload',
-    component: UploadComponent,
-    canActivate: [AuthGuard]
-  },
-  {
     path: 'LogIn',
     component: LoginComponent
   },
