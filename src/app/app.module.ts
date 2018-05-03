@@ -23,6 +23,7 @@ import { UploadService } from './services/upload.service';
 import { ProjectService } from './services/project.service';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { UploadComponent } from './upload/upload.component';
+import { LocationStrategy, HashLocationStrategy} from '@angular/common';
 
 export const firebaseConfig = {
   apiKey: config.apiKey,
@@ -53,7 +54,7 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule
   ],
-  providers: [AuthGuard, AuthenticationService, ImageService, UploadService, ProjectService, AngularFireAuth],
+  providers: [AuthGuard, { provide: LocationStrategy, useClass: HashLocationStrategy }, AuthenticationService, ImageService, UploadService, ProjectService, AngularFireAuth],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
