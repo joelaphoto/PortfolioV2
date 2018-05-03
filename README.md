@@ -1,27 +1,50 @@
-# Portfolio
+# Gummi Bear Kingdom Product Site
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
+Joel Adams' Portfolio Website
 
-## Development server
+#### By **Joel Adams**
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Description
 
-## Code scaffolding
+ Built using the Angular4 CLI, using Firebase and Firebase Storage for authentication, database services, and deployment. The site allows a user to log in as an administrator and add project entries to the database for the development page, which you're looking at now. It also allows the uploading of image files, pushing database entries as well as the file it self to Firebase Storage. Those images are listed by the category property on the photography page.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+*GitHub repo:* https://github.com/joelaphoto/GummiBearKingdom *Live Site:* https://www.joelradams.com
 
-## Build
+## Setup/Installation Requirements
+Requires Node.Js
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+1. Download or clone Github respository.
+2. Create a file called api-keys.ts in src/app/
+3. Login to Firebase and create a project, select add to web app, and copy the provided code formatted as the following into api-keys.ts:
+```
+export const config = {
+  apiKey: 'XXXXXXXXXXXXXXXXXX',
+  authDomain: 'XXXXXXXXXXXXXXXX',
+  databaseURL: 'XXXXXXXXXXXXXXXX',
+  projectId: 'XXXXXXXXXXXXXXXX',
+  storageBucket: 'XXXXXXXXXXXXXXX',
+  messagingSenderId: 'XXXXXXXXXXXXXXX'
+};
+```
+2. Run $ npm install in command line to restore dependencies.
+3. Run $ ng serve to run development server.
 
-## Running unit tests
+## Known Bugs
+* No known bugs at this time.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Technologies Used
+* Node.js
+* Angular
+* Javascript
+* Atom
+* Webpack
 
-## Running end-to-end tests
+## Support and contact details
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+_Please contact  the creator through Github.com: joelaphoto_
 
-## Further help
+### License
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+*{This software is licensed under the MIT license}*
+
+Copyright (c) 2018 **Joel Adams**
