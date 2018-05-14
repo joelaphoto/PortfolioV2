@@ -1,4 +1,4 @@
-# Gummi Bear Kingdom Product Site
+# Joel R Adams' Portfolio
 
 Joel Adams' Portfolio Website
 
