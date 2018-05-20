@@ -8,6 +8,18 @@ Joel Adams' Portfolio Website
 
  Built using the Angular4 CLI, using Firebase and Firebase Storage for authentication, database services, and deployment. The site allows a user to log in as an administrator and add project entries to the database for the development page, which you're looking at now. It also allows the uploading of image files, pushing database entries as well as the file it self to Firebase Storage. Those images are listed by the category property on the photography page.
 
+ ![Landing page screenshot](readmeImages/img.jpg)
+ Landing page screenshot
+
+ ![Photography Portfolio](readmeImages/img1.jpg)
+ Photography Portfolio page showing dynamically organized gallery view
+
+ ![Development Portfolio](readmeImages/img2.jpg)
+ Development Portfolio screenshot
+
+ ![Image Upload Form](readmeImages/img3.jpg)
+ Image uploading form in Admin component, also shows bootstrap collapsing navbar on smaller screen.
+
 *GitHub repo:* https://github.com/joelaphoto/GummiBearKingdom *Live Site:* https://www.joelradams.com
 
 ## Setup/Installation Requirements
