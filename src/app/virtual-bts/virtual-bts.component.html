@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="coast" crossorigin="anonymous" src="../../assets/images/coast.jpg">
+            <img id="garden" crossorigin="anonymous" src="../../assets/images/garden.jpeg">
+            <img id="falcon" crossorigin="anonymous" src="../../assets/images/falcon.jpg">
+            <img id="ocean" crossorigin="anonymous" src="../../assets/images/ocean.jpg">
+            <img id="paris" crossorigin="anonymous" src="../../assets/images/paris.jpg">
+            <img id="night" crossorigin="anonymous" src="../../assets/images/night.jpg">
+            <img id="nextImg" crossorigin="anonymous" src="../../assets/images/NextStretch.png">
+            <img id="backImg" crossorigin="anonymous"src="../../assets/images/BackStretch.png">
+        </a-assets>
+        <a-plane (click)="nextImg()" id="next" material="alphaTest: 0.5" position="1 -1 -0.5" rotation="-45 -45 0" width="1" height="0.5" src="#nextImg"></a-plane>
+        <a-plane (click)="backImg()" id="previous" material="alphaTest: 0.5" position="-1 -1 -0.5" rotation="-45 45 0" width="1" height="0.5" src="#backImg"></a-plane>
+
+        <a-sky id="360image" src="#coast"></a-sky>
+        <a-camera wasd-controls-enabled="false">
+            <a-cursor></a-cursor>
+        </a-camera>
+    </a-scene>
+
+</body>
+
+</html>

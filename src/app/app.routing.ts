@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { PhotoDetailComponent } from './photo-detail/photo-detail.component';
 import { AuthGuard } from './services/authguard.service'
 import { UploadComponent } from './upload/upload.component';
+import { VirtualBtsComponent } from './virtual-bts/virtual-bts.component';
 
 const appRoutes: Routes = [
   {
@@ -46,6 +47,10 @@ const appRoutes: Routes = [
   {
     path: 'Photography/Photo/:id',
     component: PhotoDetailComponent
+  },
+  {
+path: 'VirtualBts',
+component: VirtualBtsComponent
   }
 ];
 

@@ -25,6 +25,8 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { UploadComponent } from './upload/upload.component';
 import { LocationStrategy, HashLocationStrategy} from '@angular/common';
 import { ShufflePipe } from './shuffle.pipe';
+import { VirtualBtsComponent } from './virtual-bts/virtual-bts.component';
+import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 export const firebaseConfig = {
   apiKey: config.apiKey,
@@ -47,7 +49,8 @@ export const firebaseConfig = {
     LoginComponent,
     PhotoDetailComponent,
     UploadComponent,
-    ShufflePipe
+    ShufflePipe,
+    VirtualBtsComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +59,7 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule
   ],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA],
   providers: [AuthGuard, { provide: LocationStrategy, useClass: HashLocationStrategy }, AuthenticationService, ImageService, UploadService, ProjectService, AngularFireAuth],
   bootstrap: [AppComponent]
 })
