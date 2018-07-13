@@ -23,8 +23,7 @@
         <a-plane (click)="backImg()" id="previous" material="alphaTest: 0.5" position="-1 -1 -0.5" rotation="-45 45 0" width="1" height="0.5" src="#backImg"></a-plane>
 
         <a-sky id="360image" src="#coast"></a-sky>
-        <a-camera wasd-controls-enabled="false">
-            <a-cursor></a-cursor>
+        <a-camera wasd-controls-enabled="false" cursor="rayOrigin: mouse">
         </a-camera>
     </a-scene>
 

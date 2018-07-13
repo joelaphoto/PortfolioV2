@@ -11,7 +11,7 @@ export class VirtualBtsComponent implements OnInit {
 
   images = ["#coast", "#garden", "#falcon", "#ocean", "#paris", "#night"];
   currentImgIndex=0;
-  currentImg: "#coast";
+  currentImg: string;
 
   ngOnInit() {
     this.currentImg=this.images[this.currentImgIndex];
