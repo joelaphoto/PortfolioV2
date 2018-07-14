@@ -43,6 +43,22 @@
     <div *ngIf="addPhotosBool">
         <app-upload></app-upload>
     </div>
+    <div *ngFor="let image of threeSixty | async">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                            <img src='{{image.url}}' class="thumb">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>{{image.title}}</h3>
+                        <p>{{image.description}}</p>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-danger" (click)="deleteThreeSixty(image)">Delete</button>
+        </div>
+    </div>
     <div *ngFor="let image of images | async">
         <div class="card">
             <div class="card-body">

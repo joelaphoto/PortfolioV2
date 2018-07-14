@@ -19,7 +19,14 @@ export class UploadComponent {
   handleFiles(event){
     this.files = event.target.files
   }
+
   uploadFiles(title: string, description: string, category: string){
+    if (category = "360Image") {
+      this.uploadService.galleryPath();
+    }
+    else{
+      this.uploadService.portPath();
+    }
     const filesToUpload = this.files;
       this.upload = new Upload(filesToUpload[0]);
       this.upload.title = title;

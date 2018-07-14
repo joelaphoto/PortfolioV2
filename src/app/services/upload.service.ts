@@ -8,10 +8,20 @@ import * as  firebase from 'firebase';
 @Injectable()
 export class UploadService {
 
-  private basePath = '/uploads'
+  public basePath = '/uploads';
+  private upPath = '/uploads';
+  private altPath = '/360Gallery';
   private uploads: FirebaseListObservable<GalleryImage[]>;
 
   constructor(private ngFire: AngularFireModule, private db: AngularFireDatabase ) { }
+
+  galleryPath(){
+    this.basePath = this.altPath;
+  }
+
+  portPath(){
+    this.basePath = this.upPath;
+  }
 
   uploadFiles(upload: Upload) {
     const storageRef = firebase.storage().ref();
@@ -38,6 +48,12 @@ export class UploadService {
 deleteFile(name) {
   const storageRef = firebase.storage().ref();
   const imgRef = storageRef.child('uploads/' + name);
+  imgRef.delete()
+}
+
+deleteThreeSixty(name) {
+  const storageRef = firebase.storage().ref();
+  const imgRef = storageRef.child('360Gallery/' + name);
   imgRef.delete()
 }
   private saveFileData(upload: Upload) {

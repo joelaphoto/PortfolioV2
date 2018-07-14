@@ -75,8 +75,6 @@ export class PhotographyComponent implements OnInit, OnChanges {
     }
   }
 
-
-
   display(image) {
     if (this.showPortrait == true && image.category == 'portrait') {
       return true;

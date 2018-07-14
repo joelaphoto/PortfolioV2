@@ -17,6 +17,7 @@ export class AdminComponent implements OnInit {
 
   projects: FirebaseListObservable<any[]>;
   images: FirebaseListObservable<Upload[]>;
+  threeSixty: FirebaseListObservable<Upload[]>;
   isAddingProject: boolean = false;
   adminPhotosBool: boolean = false;
   adminProjectsBool: boolean = false;
@@ -27,6 +28,7 @@ export class AdminComponent implements OnInit {
   ngOnInit() {
     this.projects = this.projectService.getProjects();
     this.images = this.imageService.getImages();
+    this.threeSixty = this.imageService.getThreeSixty();
   }
 
   adminProjects() {
@@ -51,6 +53,10 @@ export class AdminComponent implements OnInit {
 
   deleteImage(image: Upload){
     this.imageService.removeImage(image);
+  }
+
+  deleteThreeSixty(image: Upload){
+    this.imageService.removeThreeSixty(image);
   }
 
   addPhotos() {

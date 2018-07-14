@@ -12,6 +12,7 @@ import { UploadService } from './upload.service';
 export class ImageService {
   private uid: string;
   images: FirebaseListObservable<Upload[]>;
+  threeSixty: FirebaseListObservable<Upload[]>;
 
   constructor(private afAuth: AngularFireAuth, private database: AngularFireDatabase, private uploadService: UploadService) {
     this.afAuth.authState.subscribe(auth => {
@@ -20,14 +21,29 @@ export class ImageService {
       }
     });
     this.images = database.list('uploads');
+    this.threeSixty = database.list('360Gallery')
   }
 
   getImages(): FirebaseListObservable<Upload[]> {
     return this.images;
   }
 
+  getThreeSixty(): FirebaseListObservable<Upload[]>{
+    return this.threeSixty;
+  }
+
   getImageById(key: string) {
     return this.database.object('uploads/' + key)
+  }
+
+  getThreeSixtyById(key: string){
+    return this.database.object('360Gallery/' + key)
+  }
+
+  removeThreeSixty(image: Upload) {
+    let imageEntry = this.getThreeSixtyById(image.$key);
+    this.uploadService.deleteThreeSixty(image.name);
+    imageEntry.remove()
   }
 
   removeImage(image: Upload) {
