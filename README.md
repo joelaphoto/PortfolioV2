@@ -20,7 +20,7 @@ Joel Adams' Portfolio Website
  ![Image Upload Form](readmeImages/img3.jpg)
  Image uploading form in Admin component, also shows bootstrap collapsing navbar on smaller screen.
 
-*GitHub repo:* https://github.com/joelaphoto/GummiBearKingdom *Live Site:* https://www.joelradams.com
+*GitHub repo:* https://github.com/joelaphoto/PortfolioV2 *Live Site:* https://www.joelradams.com
 
 ## Setup/Installation Requirements
 Requires Node.Js
