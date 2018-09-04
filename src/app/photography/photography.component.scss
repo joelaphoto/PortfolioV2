@@ -1,16 +1,21 @@
+$title-font: 'bebas-neue', 'sans-serif';
+$primary-color: red;
+$secondary-color: white;
+$tertiary-color: black;
+
 .btn {
     margin-top: 20px;
     width: 100%;
-    font-family: 'bebas-neue', 'sans-serif';
+    font-family: $title-font;
     font-size: 30px;
-    background-color: red;
+    background-color: $primary-color;
     border-radius: 0;
     margin-bottom: 5px;
 }
 
 .btn-danger {
-    color: black;
-    background-color: white;
+    color: $tertiary-color;
+    background-color: $secondary-color;
 }
 
 ul { 

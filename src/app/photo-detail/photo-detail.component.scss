@@ -1,3 +1,5 @@
+$title-font: 'bebas-neue', 'sans-serif';
+
 .img-wrapper {
     width: 100%;
 }
@@ -17,7 +19,8 @@
     height: 90%;
     border-radius: 0;
 }
+
 h2 {
-    font-family: 'bebas-neue', 'sans-serif';
+    font-family: $title-font;
 }
 

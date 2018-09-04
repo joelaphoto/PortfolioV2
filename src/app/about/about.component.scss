@@ -1,3 +1,8 @@
+$primary-color: red;
+$secondary-color: white;
+$title-font: "bebas-neue", 'sans-serif';
+$body-font: "roboto-condensed";
+
 a:hover {
     color: rgb(255, 117, 140);
 }
@@ -37,8 +42,8 @@ a {
 }
 
 h1 {
-    font-family: "bebas-neue", 'sans-serif';
-    color: white;
+    font-family: $title-font;
+    color: $secondary-color;
     text-align: center;
     font-size: 200px;
     margin-bottom: -40px;
@@ -46,15 +51,15 @@ h1 {
 }
 
 #subHead {
-    font-family: "roboto-condensed";
-    color: white;
+    font-family: $body-font;
+    color: $secondary-color;
     text-align: center;
     font-size: 45px;
     font-weight: lighter;
 }
 
 .redLine {
-    color: red;
+    color: $primary-color;
 }
 
 .card {
@@ -65,21 +70,21 @@ h1 {
 
 .btn {
     width: 100%;
-    font-family: 'bebas-neue', 'sans-serif';
+    font-family: $title-font;
     font-size: 24px;
     border-radius: 0;
     margin-top: 5px;
-    background-color: red;
+    background-color: $primary-color;
 
 }
 
 .card-title{
-    font-family: "bebas-neue", 'sans-serif';
+    font-family: $title-font;
     font-size: 40px;
 }
 
 .card-text {
-    font-family: 'roboto-condensed'
+    font-family: $body-font;
 }
 
 .boldText, h6 {

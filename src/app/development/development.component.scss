@@ -1,5 +1,9 @@
+$primary-color: red;
+$title-font: 'bebas-neue', 'sans-serif';
+$body-font: 'roboto-condensed';
+
 body {
-    font-family: 'roboto-condensed'
+    font-family: $body-font;
 }
 
 .project-name {
@@ -16,7 +20,7 @@ body {
 }
 
 .card-title {
-    font-family: 'bebas-neue', 'sans-serif'
+    font-family: $title-font;
 }
 
 .project-desc {
@@ -37,8 +41,8 @@ h2 {
 .btn {
     width: 100%;
     font-size: 40px;
-    font-family: 'bebas-neue', 'sans-serif';
-    background-color: red;
+    font-family: $title-font;
+    background-color: $primary-color;
     border-radius: 0;
 }
 
