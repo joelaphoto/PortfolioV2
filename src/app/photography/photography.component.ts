@@ -8,7 +8,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
 @Component({
   selector: 'app-photography',
   templateUrl: './photography.component.html',
-  styleUrls: ['./photography.component.css'],
+  styleUrls: ['./photography.component.scss'],
   providers: [ImageService]
 })
 export class PhotographyComponent implements OnInit, OnChanges {

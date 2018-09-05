@@ -5,7 +5,7 @@ import { Project } from '../models/project.model';
 @Component({
   selector: 'app-add-project',
   templateUrl: './add-project.component.html',
-  styleUrls: ['./add-project.component.css'],
+  styleUrls: ['./add-project.component.scss'],
   providers: [ProjectService]
 })
 export class AddProjectComponent implements OnInit {

@@ -8,7 +8,7 @@ import { element } from "protractor";
 @Component({
   selector: "app-virtual-bts",
   templateUrl: "./virtual-bts.component.html",
-  styleUrls: ["./virtual-bts.component.css"]
+  styleUrls: ["./virtual-bts.component.scss"]
 })
 export class VirtualBtsComponent implements OnInit {
   constructor(private imageService: ImageService) {}

@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-Development',
   templateUrl: './development.component.html',
-  styleUrls: ['./development.component.css'],
+  styleUrls: ['./development.component.scss'],
   providers: [ProjectService]
 })
 export class DevelopmentComponent implements OnInit {

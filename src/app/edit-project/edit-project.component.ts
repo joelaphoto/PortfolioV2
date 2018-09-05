@@ -6,7 +6,7 @@ import { Location } from '@angular/common';
 @Component({
   selector: 'app-edit-project',
   templateUrl: './edit-project.component.html',
-  styleUrls: ['./edit-project.component.css'],
+  styleUrls: ['./edit-project.component.scss'],
   providers: [ProjectService]
 })
 export class EditProjectComponent implements OnInit {
