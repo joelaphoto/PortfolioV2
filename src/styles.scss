@@ -1,9 +1,9 @@
-$body-font: 'roboto-condensed', 'sans-serif';
+@import 'variables';
 
 body {
     background-image: url(assets/images/dark-triangles.png) 
 }
 
 p {
-    font-family: 'roboto-condensed', sans-serif;
+    font-family: $body-font;
 }

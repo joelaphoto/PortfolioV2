@@ -1,6 +1,4 @@
-$primary-color: red;
-$title-font: 'bebas-neue', 'sans-serif';
-$body-font: 'roboto-condensed';
+@import 'variables';
 
 body {
     font-family: $body-font;

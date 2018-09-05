@@ -1,7 +1,4 @@
-$primary-color: red;
-$secondary-color: white;
-$title-font: "bebas-neue", 'sans-serif';
-$body-font: "roboto-condensed";
+@import 'variables';
 
 a:hover {
     color: rgb(255, 117, 140);
