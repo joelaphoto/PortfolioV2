@@ -15,22 +15,22 @@
       </div>
       <div class="form-group">
         <label>Title</label>
-        <input type="text" [(ngModel)]="title" placeholder="Title..." class="form-control">
+        <input type="text" #title placeholder="Title..." class="form-control">
       </div>
       <div class="form-group">
         <label>Description</label>
-        <input type="text" [(ngModel)]="description" placeholder="Description..." class="form-control">
+        <input type="text" #description placeholder="Description..." class="form-control">
       </div>
       <div class="form-group">
         <label>Category</label>
-        <select class="form-control" [(ngModel)]="category">
+        <select class="form-control" #category>
           <option value="portrait">Portrait</option>
           <option value="event">Event</option>
           <option value="360Image">360 Image</option>
           <!-- <option value="product">Product</option> -->
         </select>
       </div>
-      <button class="btn btn-primary" (click)="uploadFiles(title, description, category)">Upload Images</button>
+      <button class="btn btn-primary" (click)="uploadFiles(title.value, description.value, category.value)">Upload Images</button>
     </div>
   </div>
 </div>
