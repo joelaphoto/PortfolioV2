@@ -1,26 +1,18 @@
 import { Injectable } from '@angular/core';
-import { AngularFireModule } from 'angularfire2';
-import { GalleryImage } from '../models/gallery-image.model';
-import { AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database';
+import { AngularFireDatabase } from 'angularfire2/database';
 import { Upload } from '../models/upload.model';
 import * as  firebase from 'firebase';
 
 @Injectable()
 export class UploadService {
 
-  public basePath = '/uploads';
-  private upPath = '/uploads';
-  private altPath = '/360Gallery';
-  private uploads: FirebaseListObservable<GalleryImage[]>;
+  public basePath = '/galleries';
 
-  constructor(private ngFire: AngularFireModule, private db: AngularFireDatabase ) { }
+  constructor(private db: AngularFireDatabase ) { }
 
-  galleryPath(){
-    this.basePath = this.altPath;
-  }
-
-  portPath(){
-    this.basePath = this.upPath;
+  setUploadPath(galleryName: string) {
+    this.basePath = '/galleries/' + galleryName;
+    console.log(this.basePath);
   }
 
   uploadFiles(upload: Upload) {
@@ -39,24 +31,19 @@ export class UploadService {
 
     ():any => {
       upload.url = uploadTask.snapshot.downloadURL;
-      upload.name = upload.file.name;
+      upload.title = upload.file.name;
       this.saveFileData(upload);
     }
   );
 }
 
-deleteFile(name) {
+deleteFile(name, gallery) {
   const storageRef = firebase.storage().ref();
-  const imgRef = storageRef.child('uploads/' + name);
+  const imgRef = storageRef.child( '/galleries/' + gallery + '/' + name);
   imgRef.delete()
 }
 
-deleteThreeSixty(name) {
-  const storageRef = firebase.storage().ref();
-  const imgRef = storageRef.child('360Gallery/' + name);
-  imgRef.delete()
-}
-  private saveFileData(upload: Upload) {
+private saveFileData(upload: Upload) {
     this.db.list(`${this.basePath}/`).push(upload);
     console.log("Files Saved: " + upload.url)
   }

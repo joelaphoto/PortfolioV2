@@ -11,7 +11,6 @@ import { PhotographyComponent } from './photography/photography.component';
 import { DevelopmentComponent } from './development/development.component';
 import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { AdminComponent } from './admin/admin.component';
 import { AddProjectComponent } from './add-project/add-project.component';
 import { EditProjectComponent } from './edit-project/edit-project.component';
 import { LoginComponent } from './login/login.component';
@@ -43,7 +42,6 @@ export const firebaseConfig = {
     DevelopmentComponent,
     AboutComponent,
     NavbarComponent,
-    AdminComponent,
     AddProjectComponent,
     EditProjectComponent,
     LoginComponent,

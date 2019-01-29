@@ -1,18 +1,15 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Rx';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import 'firebase/storage';
-import { GalleryImage } from '../models/gallery-image.model';
-import * as firebase from 'firebase';
 import { Upload } from '../models/upload.model';
 import { UploadService } from './upload.service';
 
 @Injectable()
 export class ImageService {
   private uid: string;
-  images: FirebaseListObservable<Upload[]>;
-  threeSixty: FirebaseListObservable<Upload[]>;
+  gallery: FirebaseListObservable<Upload[]>;
+  allGalleries: FirebaseListObservable<any[]>;
 
   constructor(private afAuth: AngularFireAuth, private database: AngularFireDatabase, private uploadService: UploadService) {
     this.afAuth.authState.subscribe(auth => {
@@ -20,35 +17,30 @@ export class ImageService {
         this.uid = auth.uid;
       }
     });
-    this.images = database.list('uploads');
-    this.threeSixty = database.list('360Gallery')
+    this.allGalleries = this.database.list('galleries');
   }
 
-  getImages(): FirebaseListObservable<Upload[]> {
-    return this.images;
+  setGallery(galleryPath: string) {
+    this.gallery = this.database.list('galleries/' + galleryPath + '/');
   }
 
-  getThreeSixty(): FirebaseListObservable<Upload[]>{
-    return this.threeSixty;
+  getGallery() {
+    return this.gallery;
   }
 
-  getImageById(key: string) {
-    return this.database.object('uploads/' + key)
+  deleteGallery(galleryPath: string) {
+    const galleryToDelete = this.database.list('galleries/' + galleryPath + '/');
+    galleryToDelete.remove();
+
   }
 
-  getThreeSixtyById(key: string){
-    return this.database.object('360Gallery/' + key)
-  }
-
-  removeThreeSixty(image: Upload) {
-    let imageEntry = this.getThreeSixtyById(image.$key);
-    this.uploadService.deleteThreeSixty(image.name);
-    imageEntry.remove()
+  getImageById(galleryPath: string, key: string) {
+    return this.database.object('galleries/' + galleryPath + '/' + key);
   }
 
   removeImage(image: Upload) {
-    let imageEntry = this.getImageById(image.$key);
-    this.uploadService.deleteFile(image.name);
-    imageEntry.remove()
+    let imageEntry = this.getImageById(image.gallery.toLowerCase(), image.$key);
+    imageEntry.remove();
+    this.uploadService.deleteFile(image.title, image.gallery.toLowerCase());
   }
 }
