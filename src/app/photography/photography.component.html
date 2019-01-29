@@ -1,23 +1,16 @@
-<div class="row">
-  <div class="col-md-6">
-    <button class="btn btn-danger" [ngStyle]="{'background-color': isPortraitActive()}" (click)="viewPortrait()">Portrait</button>
-  </div>
-  <div class="col-md-6">
-    <button class="btn btn-danger" [ngStyle]="{'background-color': isEventActive()}" (click)="viewEvent()">Event</button>
-  </div>
-</div>
-<div class="row">
-  <div id='thumbs'>
-    <ul>
-      <div *ngFor='let image of images | shuffle'>
-        <div *ngIf='display(image)'>
-          <li class='img'>
-            <a [routerLink]="['Photo', image.$key]">
-              <img src='{{image.url}}' class="thumb">
-            </a>
-          </li>
+<div class="gallery-section">
+  <div class="container">
+    <h1 class="gallery-title">{{galleryName}}</h1>
+    <ul id="gallery-list">
+      <li *ngFor="let image of images">
+        <a (click)='goToImageDetail(image)'><img src="{{image.url}}"></a>
+        <div *ngIf='(user|async)?.uid'>
+          <button class="btn btn-danger" (click)='deleteImage(image)'>Delete Image</button>
         </div>
-      </div>
+      </li>
     </ul>
+    <div id="upload-window" *ngIf='(user|async)?.uid'>
+      <app-upload [galleryName]='(galleryName)'></app-upload>
+    </div>
   </div>
 </div>

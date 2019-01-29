@@ -18,16 +18,16 @@ export class VirtualBtsComponent implements OnInit {
   currentImgIndex = 0;
 
   ngOnInit() {
-    this.imageService.getThreeSixty().subscribe(data => {
-      this.threeSixty = data;
-      let imageArr = new Array<string>();
-      imageArr.push("#coast");
-      this.threeSixty.forEach(function(element) {
-        let url = element.url;
-        imageArr.push(url);
-      });
-      this.imageUrls = imageArr;
-    });
+    // this.imageService.getThreeSixty().subscribe(data => {
+    //   this.threeSixty = data;
+    //   let imageArr = new Array<string>();
+    //   imageArr.push("#coast");
+    //   this.threeSixty.forEach(function(element) {
+    //     let url = element.url;
+    //     imageArr.push(url);
+    //   });
+    //   this.imageUrls = imageArr;
+    // });
   }
 
   HighLightNext(){
