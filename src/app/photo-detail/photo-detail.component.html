@@ -1,19 +1,14 @@
-<div class="row">
-    <div class="col-md-8">
-        <div class="img-wrapper">
-            <img src="{{imgUrl}}" id="display-img">
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card">
-            <div class="card-body">
-                <div class="card-title">
-                    <h2>{{(imageToDisplay | async)?.title}}</h2>
-                </div>
-                <div class="card-body">
-                    <p>{{(imageToDisplay | async)?.description}}</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<div class="gallery-section">
+    <div class="container">
+        <h1 class="card-title">{{imageToDisplay?.name}}</h1>
+  
+            <img src="{{imageToDisplay?.url}}" alt="">
+                <button class="btn btn-back" (click)='navToGallery()'>Back</button>
+                <div *ngIf='(user|async)?.uid'>
+  
+                <button class="btn btn-danger" (click)='deleteImage()'>Delete</button>
+              </div>
+  
+      </div>
+  </div>
+  
