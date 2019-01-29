@@ -19,7 +19,7 @@ export class ContactComponent implements OnInit {
     } else if (message === '') {
       return alert('Please Enter a Message')
     } else {
-      var destinationEmail = "joeladamsphotography@gmail.com";
+      var destinationEmail = "joeladamsdesign@gmail.com";
       var form = document.createElement('form');
       form.setAttribute("action", "https://formspree.io/" + destinationEmail)
       form.setAttribute("method", "POST")
