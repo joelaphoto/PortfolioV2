@@ -26,6 +26,7 @@ import { LocationStrategy, HashLocationStrategy} from '@angular/common';
 import { ShufflePipe } from './shuffle.pipe';
 import { VirtualBtsComponent } from './virtual-bts/virtual-bts.component';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import { ContactComponent } from './contact/contact.component';
 
 export const firebaseConfig = {
   apiKey: config.apiKey,
@@ -48,7 +49,8 @@ export const firebaseConfig = {
     PhotoDetailComponent,
     UploadComponent,
     ShufflePipe,
-    VirtualBtsComponent
+    VirtualBtsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
