@@ -23,4 +23,12 @@ export class NavbarComponent implements OnInit {
     this.authService.logout().then(onResolve => this.router.navigate['/']);
   }
 
+  toPortrait() {
+    this.router.navigate(['photography', 'portrait'])
+  }
+
+  toEvent() {
+    this.router.navigate(['photography', 'event'])
+  }
+
 }

@@ -19,38 +19,38 @@ const appRoutes: Routes = [
     component: HomepageComponent
   },
   {
-    path: 'Development',
+    path: 'development',
     component: DevelopmentComponent
   },
   {
-    path: 'Photography/:category',
+    path: 'photography/:category',
     component: PhotographyComponent
   },
   {
-    path: 'About',
+    path: 'about',
     component: AboutComponent
   },
   {
-    path: 'Admin',
+    path: 'admin',
     component: AdminComponent,
     canActivate: [AuthGuard]
   },
   {
-    path: 'Admin/Projects/:id',
+    path: 'admin/projects/:id',
     component: EditProjectComponent,
     canActivate: [AuthGuard]
   },
   {
-    path: 'LogIn',
+    path: 'login',
     component: LoginComponent
   },
   {
-    path: 'Photography/:category/:id',
+    path: 'photography/:category/:id',
     component: PhotoDetailComponent
   },
   {
-path: 'VirtualBts',
-component: VirtualBtsComponent
+    path: 'VirtualBts',
+    component: VirtualBtsComponent
   }
 ];
 

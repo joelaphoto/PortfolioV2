@@ -7,13 +7,20 @@
     <div class="collapse navbar-collapse" id="siteNavbar">
       <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-              <a class="nav-link" routerLink='/About'>About</a>
+              <a class="nav-link" routerLink='/about'>About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Photography
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" (click)='toPortrait()'>Portrait</a>
+              <a class="dropdown-item" (click)='toEvent()'>Event</a>
+            </div>
           </li>
           <li class="nav-item">
-              <a class="nav-link" routerLink='/Photography'>Photography</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" routerLink='/Development'>Development</a>
+              <a class="nav-link" routerLink='/development'>Development</a>
           </li>
           <!-- <li class="nav-item">
               <div *ngIf='!(user|async)?.uid'>
@@ -23,7 +30,7 @@
           <li class="nav-item">
               <div *ngIf='(user|async)?.uid'>
 
-              <a class="nav-link" routerLink='/Admin'>Admin</a>
+              <a class="nav-link" routerLink='/admin'>Admin</a>
               </div>
           </li>
           <li class="nav-item">
