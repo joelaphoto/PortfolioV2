@@ -18,7 +18,7 @@ const appRoutes: Routes = [
     component: DevelopmentComponent
   },
   {
-    path: 'photography/:category',
+    path: 'photography/:gallery',
     component: PhotographyComponent
   },
   {
@@ -30,7 +30,7 @@ const appRoutes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'photography/:category/:id',
+    path: 'photography/:gallery/:id',
     component: PhotoDetailComponent
   },
   {

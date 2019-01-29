@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Upload } from '../models/upload.model';
 import { UploadService } from '../services/upload.service'
 
@@ -8,6 +8,8 @@ import { UploadService } from '../services/upload.service'
   styleUrls: ['./upload.component.scss']
 })
 export class UploadComponent implements OnInit {
+  @Input() galleryName;
+
   files: FileList;
   upload: Upload;
   addingImages: boolean;

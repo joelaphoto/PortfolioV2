@@ -1,4 +1,12 @@
 @import '../../variables';
+.container {
+    padding-top: 60px;
+}
+
+.gallery-title {
+    text-transform: capitalize;
+    color: white;
+}
 
 .btn {
     margin-top: 20px;

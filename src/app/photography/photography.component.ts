@@ -13,10 +13,6 @@ import { Observable } from 'rxjs';
 })
 export class PhotographyComponent implements OnInit {
 
-  showPortrait: boolean = false;
-  showEvent: boolean = false;
-  showProduct: boolean = false;
-
   galleryName: string;
   images: Upload[];
   user: Observable<firebase.User>
@@ -25,12 +21,13 @@ export class PhotographyComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-      this.galleryName = urlParameters['gallery']
+      this.galleryName = urlParameters['gallery'];
     })
-    this.imageService.setGallery(this.galleryName.toLowerCase());
+    this.imageService.setGallery(this.galleryName);
     this.imageService.getGallery().subscribe(data => {
       this.images = data;
     });
+    this.user = this.authService.authUser();
   }
 
   goToImageDetail(clickedImage) {
