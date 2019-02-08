@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
     <a class="navbar-brand" href="#">Joel Adams</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#siteNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -6,24 +6,14 @@
   
     <div class="collapse navbar-collapse" id="siteNavbar">
       <ul class="navbar-nav ml-auto">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Photography
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" (click)='toPortrait()'>Portrait</a>
-              <a class="dropdown-item" (click)='toEvent()'>Event</a>
-            </div>
+          <li class="nav-item">
+              <a class="nav-link" routerLink='/photography'>Photography</a>
           </li>
           <li class="nav-item">
               <a class="nav-link" routerLink='/development'>Development</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink='/design'>Design</a>
-        </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink='/about'>About</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" routerLink='/contact'>Contact</a>
