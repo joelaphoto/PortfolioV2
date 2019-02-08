@@ -27,6 +27,7 @@ import { ShufflePipe } from './shuffle.pipe';
 import { VirtualBtsComponent } from './virtual-bts/virtual-bts.component';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { ContactComponent } from './contact/contact.component';
+import { DesignComponent } from './design/design.component';
 
 export const firebaseConfig = {
   apiKey: config.apiKey,
@@ -50,7 +51,8 @@ export const firebaseConfig = {
     UploadComponent,
     ShufflePipe,
     VirtualBtsComponent,
-    ContactComponent
+    ContactComponent,
+    DesignComponent
   ],
   imports: [
     BrowserModule,

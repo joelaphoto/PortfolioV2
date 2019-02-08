@@ -8,6 +8,7 @@ import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 import { PhotoDetailComponent } from './photo-detail/photo-detail.component';
 import { VirtualBtsComponent } from './virtual-bts/virtual-bts.component';
+import { DesignComponent } from './design/design.component';
 
 const appRoutes: Routes = [
   {
@@ -29,6 +30,10 @@ const appRoutes: Routes = [
   {
     path: 'contact',
     component: ContactComponent
+  },
+  {
+    path: 'design',
+    component: DesignComponent
   },
   {
     path: 'login',
