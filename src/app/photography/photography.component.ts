@@ -13,17 +13,12 @@ import { Observable } from 'rxjs';
 })
 export class PhotographyComponent implements OnInit {
 
-  galleryName: string;
   images: Upload[];
   user: Observable<firebase.User>
 
   constructor(private authService: AuthenticationService, private imageService: ImageService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
-    this.route.params.forEach((urlParameters) => {
-      this.galleryName = urlParameters['gallery'];
-    })
-    this.imageService.setGallery(this.galleryName);
     this.imageService.getGallery().subscribe(data => {
       this.images = data;
     });
@@ -31,7 +26,7 @@ export class PhotographyComponent implements OnInit {
   }
 
   goToImageDetail(clickedImage) {
-    this.router.navigate(['photography', clickedImage.gallery, clickedImage.$key]);
+    this.router.navigate([clickedImage.$key]);
   }
 
   deleteImage(image) {

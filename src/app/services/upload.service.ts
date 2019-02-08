@@ -10,11 +10,6 @@ export class UploadService {
 
   constructor(private db: AngularFireDatabase ) { }
 
-  setUploadPath(galleryName: string) {
-    this.basePath = '/galleries/' + galleryName;
-    console.log(this.basePath);
-  }
-
   uploadFiles(upload: Upload) {
     const storageRef = firebase.storage().ref();
     const uploadTask = storageRef.child(`${this.basePath}/${upload.file.name}`).put(upload.file);
@@ -37,9 +32,9 @@ export class UploadService {
   );
 }
 
-deleteFile(name, gallery) {
+deleteFile(name) {
   const storageRef = firebase.storage().ref();
-  const imgRef = storageRef.child( '/galleries/' + gallery + '/' + name);
+  const imgRef = storageRef.child( '/galleries/' + name);
   imgRef.delete()
 }
 

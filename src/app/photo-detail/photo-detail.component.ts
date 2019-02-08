@@ -14,29 +14,22 @@ export class PhotoDetailComponent implements OnInit {
 
   constructor(private authService: AuthenticationService, private imageService: ImageService, private route: ActivatedRoute, private router: Router) { }
 
-  galleryName: string;
   imageKey: string;
   imageToDisplay: Upload;
   user: Observable<firebase.User>
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-      this.galleryName = urlParameters['gallery'];
       this.imageKey = urlParameters['id'];
     });
-    this.imageService.getImageById(this.galleryName, this.imageKey).subscribe( data => {
+    this.imageService.getImageById(this.imageKey).subscribe( data => {
       this.imageToDisplay = data;
     });
     this.user = this.authService.authUser();
   }
 
-  navToGallery() {
-    this.router.navigate(['photography',this.imageToDisplay.gallery])
-  }
-
   deleteImage() {
     this.imageService.removeImage(this.imageToDisplay)
-    this.router.navigate([this.imageToDisplay.gallery]);
-    window.location.reload();
+    this.router.navigate(['/photography']);
   }
 }

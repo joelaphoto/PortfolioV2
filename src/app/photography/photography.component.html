@@ -1,16 +1,68 @@
+<div class="head-section">
+  <div class="container">
+    <p>
+        <span class="title">Photography</span> is my first love, starting out at the age of 18 at the University of Alaska on an old Nikon FM-2 and a roll of black and white film. I worked towards a Fine Art Photography degree at UAA, earning myself a solo exhibition of my Advanced Photography course work.<br>
+        <br> 
+        I had no idea then that my passion for creating and capturing moments in time would develop into a career taking photos for hundreds of clients, from couples about to be married and Instagram models looking to break into the industry, to clothing brands looking for lifestyle shots and news outlets wanting coverage of massive music festivals.
+    </p>
+    <div class="row">
+      <div class="col-6 skill">
+        <img class="skill-icon" src="../../assets/images/icons/photoshop.png" alt="">
+        <h1>ADOBE PHOTOSHOP</h1>
+        <h3>10 years</h3>
+        <div class="skill-bar">
+          <div class="skill-bar-inner w-85">
+
+          </div>
+        </div>
+      </div>
+      <div class="col-6 skill">
+          <img class="skill-icon" src="../../assets/images/icons/camera.png" alt="">
+          <h1>DSLR PHOTOGRAPHY</h1>
+          <h3>11 years</h3>
+          <div class="skill-bar">
+            <div class="skill-bar-inner w-90">
+  
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 skill">
+          <img class="skill-icon" src="../../assets/images/icons/lights.png" alt="">
+          <h1>STUDIO LIGHTING</h1>
+          <h3>7 years</h3>
+          <div class="skill-bar">
+            <div class="skill-bar-inner w-75">
+  
+            </div>
+          </div>
+        </div>
+        <div class="col-6 skill">
+            <img class="skill-icon" src="../../assets/images/icons/lightroom.png" alt="">
+            <h1>ADOBE LIGHTROOM</h1>
+            <h3>8 years</h3>
+            <div class="skill-bar">
+              <div class="skill-bar-inner w-75">
+    
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+</div>
 <div class="gallery-section">
   <div class="container">
-    <h1 class="gallery-title">{{galleryName}}</h1>
     <ul id="gallery-list">
       <li *ngFor="let image of images">
-        <a (click)='goToImageDetail(image)'><img src="{{image.url}}"></a>
+        <a (click)='goToImageDetail(image)'><img class="thumb" src="{{image.url}}"></a>
         <div *ngIf='(user|async)?.uid'>
-          <button class="btn btn-danger" (click)='deleteImage(image)'>Delete Image</button>
+          <button class="btn btn-danger" (click)='deleteImage(image)'>X</button>
         </div>
       </li>
     </ul>
     <div id="upload-window" *ngIf='(user|async)?.uid'>
-      <app-upload [galleryName]='(galleryName)'></app-upload>
+      <app-upload></app-upload>
     </div>
   </div>
 </div>
