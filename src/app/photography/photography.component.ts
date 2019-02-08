@@ -26,7 +26,7 @@ export class PhotographyComponent implements OnInit {
   }
 
   goToImageDetail(clickedImage) {
-    this.router.navigate([clickedImage.$key]);
+    this.router.navigate(['photography', clickedImage.$key]);
   }
 
   deleteImage(image) {
