@@ -16,14 +16,23 @@
 .btn {
     color: white;
     display: block;
-    width: 20%;
     font-family: $body-font;
     font-size: 26px;
-    background: linear-gradient(180deg, #FF0000 0%, rgba(143, 0, 0, 0.75) 100%);    border-radius: 0;
+    background: linear-gradient(180deg, #FF0000 0%, rgba(143, 0, 0, 0.75) 100%);    
+    border-radius: 0;
     margin-top: 20px;
     margin-bottom: 5px;
     margin-right: auto;
     margin-left: auto;
+}
+
+.btn:hover {
+  background: linear-gradient(180deg, rgb(255, 91, 91) 0%, rgba(143, 0, 0, 0.925) 100%);    
+}
+
+.btn:active {
+  display: block;
+  background: linear-gradient(180deg, rgb(139, 0, 0) 0%, rgba(90, 0, 0, 0.438) 100%);    
 }
 
 .textbox {
@@ -37,6 +46,39 @@
   color: white;
   font-size: 35px;
   text-align: center;
+}
+
+.port-text {
+  color: white;
+  font-family: $title-font;
+  text-align: right;
+}
+
+.port-text-left {
+  color: white;
+  font-family: $title-font;
+}
+
+.port-text h1, .port-text-left h1{
+  letter-spacing: 0.1em;
+  font-size: 4vw;
+  margin-bottom: 0;
+}
+
+.port-row {
+  margin-top: 40px;
+}
+
+.port-image {
+  max-width: 100%;
+}
+
+.port-button {
+  width: 100%;
+}
+
+.sec1-button {
+  width: 30%;
 }
 
 .content {
