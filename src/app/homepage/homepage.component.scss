@@ -20,8 +20,8 @@
 .btn {
     color: white;
     display: block;
-    font-family: $body-font;
-    font-size: 26px;
+    font-family: $title-font;
+    font-size: 36px;
     background: linear-gradient(180deg, #FF0000 0%, rgba(143, 0, 0, 0.75) 100%);    
     border-radius: 0;
     margin-top: 20px;
@@ -75,6 +75,15 @@
 
 .port-image {
   max-width: 100%;
+}
+
+.port-image:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.port-image:active {
+  opacity: 0.6;
 }
 
 .port-button {
