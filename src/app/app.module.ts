@@ -62,7 +62,7 @@ export const firebaseConfig = {
     AngularFireDatabaseModule
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
-  providers: [AuthGuard, { provide: LocationStrategy, useClass: HashLocationStrategy }, AuthenticationService, ImageService, UploadService, ProjectService, AngularFireAuth],
+  providers: [AuthGuard, AuthenticationService, ImageService, UploadService, ProjectService, AngularFireAuth],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
