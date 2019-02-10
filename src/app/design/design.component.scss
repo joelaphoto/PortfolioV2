@@ -105,13 +105,60 @@ letter-spacing: 0.1em;
     height: 100%;
 }
 
-.portfolio-section img {
-    max-height: 220px;
+.mobile{
+    display: block;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
 }
+
+.port-img {
+    max-height: 15vw;
+}
+
 
 .flex-row {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
+}
+
+@media only screen and (max-device-width: 1200px) {
+    .skill h1 {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-device-width: 768px) {
+    .display {
+        display: none;
+    }
+    
+    p {
+        font-size: 18px;
+    }
+
+    .skill h1 {
+        font-size: 20px;
+    }
+
+    
+    .skill-icon {
+        max-width: 75px;
+        margin-right: 10px;
+    }
+
+    ul {
+        columns: 2;
+    }
+}
+
+@media only screen and (max-device-width: 450px) {
+    .skill-icon{
+        float: unset;
+        display: block;
+        font-size: 40px;
+    }
 }
 
