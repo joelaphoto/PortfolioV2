@@ -155,3 +155,46 @@ p {
     color: white;
 }
 
+@media only screen and (max-device-width: 1200px) {
+    .skill h1 {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-device-width: 768px) {
+    .project-name {
+        font-size: 35px;
+    }
+    
+    p {
+        font-size: 18px;
+    }
+
+    .skill h1 {
+        font-size: 20px;
+    }
+
+    
+    .skill-icon {
+        max-width: 75px;
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (max-device-width: 450px) {
+    .project-img {
+        margin-right: 0;
+        margin-left: 0;
+        max-width: 100%;
+        display: block;
+        float: unset;
+        margin-bottom: 20px;
+    }
+
+    .skill-icon{
+        float: unset;
+        display: block;
+        font-size: 40px;
+    }
+}
+
