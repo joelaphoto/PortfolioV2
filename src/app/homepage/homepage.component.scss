@@ -178,6 +178,12 @@
   }
 }
 
+@media only screen and (max-device-width: 575px) {
+ .hide {
+   display: none;
+ }
+}
+
 @media only screen and (max-device-width: 477px) {
 
   .port-text h1, .port-text-left h1{
