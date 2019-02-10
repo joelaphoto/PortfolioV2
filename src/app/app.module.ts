@@ -28,6 +28,7 @@ import { VirtualBtsComponent } from './virtual-bts/virtual-bts.component';
 import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { ContactComponent } from './contact/contact.component';
 import { DesignComponent } from './design/design.component';
+import { FooterComponent } from './footer/footer.component';
 
 export const firebaseConfig = {
   apiKey: config.apiKey,
@@ -52,7 +53,8 @@ export const firebaseConfig = {
     ShufflePipe,
     VirtualBtsComponent,
     ContactComponent,
-    DesignComponent
+    DesignComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +64,7 @@ export const firebaseConfig = {
     AngularFireDatabaseModule
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
-  providers: [AuthGuard, AuthenticationService, ImageService, UploadService, ProjectService, AngularFireAuth],
+  providers: [AuthGuard, { provide: LocationStrategy, useClass: HashLocationStrategy }, AuthenticationService, ImageService, UploadService, ProjectService, AngularFireAuth],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
