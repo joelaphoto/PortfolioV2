@@ -1,3 +1,6 @@
+<head> <script type="text/javascript"> function scroll(element){   
+  var ele = document.getElementById(element);   
+  window.scrollTo(ele.offsetLeft,ele.offsetTop); } </script> </head>
 <div class="head">
   <div class="container">
     <img class="title" src="../../assets/images/header.png">
@@ -27,31 +30,31 @@
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img class="d-block w-100" src="./../../assets/images/carousel/car1.jpg" alt="Band">
+          <img class="d-block w-100" src="./../../assets/images/carousel/car1.jpg" routerLink='/photography' alt="Band">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="./../../assets/images/carousel/car2.png" alt="Products">
+          <img class="d-block w-100" src="./../../assets/images/carousel/car2.png" routerLink='/design' alt="Products">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="./../../assets/images/carousel/car3.jpg" alt="Ignite">
+          <img class="d-block w-100" src="./../../assets/images/carousel/car3.jpg" routerLink='/design' alt="Ignite">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="./../../assets/images/carousel/car4.jpg" alt="Aurelia">
+          <img class="d-block w-100" src="./../../assets/images/carousel/car4.jpg" routerLink='/development' alt="Aurelia">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="./../../assets/images/carousel/car5.jpg" alt="Splash">
+          <img class="d-block w-100" src="./../../assets/images/carousel/car5.jpg" routerLink='/photography' alt="Splash">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="./../../assets/images/carousel/car6.jpg" alt="Modern">
+          <img class="d-block w-100" src="./../../assets/images/carousel/car6.jpg" routerLink='/photography' alt="Modern">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="./../../assets/images/carousel/car7.jpg" alt="Funnels">
+          <img class="d-block w-100" src="./../../assets/images/carousel/car7.jpg" routerLink='/design' alt="Funnels">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="./../../assets/images/carousel/car8.jpg" alt="Drummer">
+          <img class="d-block w-100" src="./../../assets/images/carousel/car8.jpg" routerLink='/photography' alt="Drummer">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="./../../assets/images/carousel/car9.jpg" alt="Alienoid">
+          <img class="d-block w-100" src="./../../assets/images/carousel/car9.jpg" routerLink='/development' alt="Alienoid">
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -64,24 +67,25 @@
       </a>
     </div>
     <div class="row port-row">
-      <div class="col-5 port-text">
+        <div class="d-md-none d-sm-block col-sm-12">
+            <img class="port-image" src="./../../assets/images/port1.jpg" routerLink='/photography' alt="">
+          </div>
+      <div class="col-md-5 col-sm-12 port-text">
         <h1>PHOTOGRAPHY</h1>
         <h2>11 YEARS EXPERIENCE</h2>
         <p>Photography is one of my most developed skills, having worked in the event and portraiture disciplines for
           over a decade.</p>
-        <button class="btn btn-danger port-button" routerLink='/development'>VIEW PORTFOLIO</button>
+        <button class="btn btn-danger port-button" routerLink='/photography'>VIEW PORTFOLIO</button>
       </div>
-      <div class="col-7">
-        <img class="port-image" src="./../../assets/images/port1.jpg" routerLink='/development' alt="">
+      <div class="col-md-7 d-md-block d-sm-none col-sm-12">
+        <img class="port-image" src="./../../assets/images/port1.jpg" routerLink='/photography' alt="">
       </div>
     </div>
     <div class="row port-row">
-      <div class="col-7 port-image">
-
+      <div class="col-md-7 port-image">
         <img class="port-image" src="./../../assets/images/port2.jpg" routerLink='/design' alt="ignite">
-
       </div>
-      <div class="col-5 port-text-left">
+      <div class="col-md-5 col-sm-12 port-text-left">
           <h1>DESIGN</h1>
           <h2>8 YEARS EXPERIENCE</h2>
           <p>Design is my passion, I’ve worked in everything from product and signage to UI and web design for a wide variety of clients.</p>
@@ -89,14 +93,17 @@
       </div>
     </div>
     <div class="row port-row">
-      <div class="col-5 port-text">
+        <div class="d-md-none d-sm-block col-sm-12">
+            <img class="port-image" src="./../../assets/images/port3.jpg" routerLink='/development' alt="">
+          </div>
+      <div class="col-md-5 port-text">
         <h1>DEVELOPMENT</h1>
         <h2>1 YEAR EXPERIENCE</h2>
         <p>Coding and application development is the newest skill I’ve added to my repetoir but I’ve found I have an aptitude for learning new technologies and a desire to improve my skillset.</p>
         <button class="btn btn-danger port-button" routerLink='/development'>VIEW PORTFOLIO</button>
       </div>
-      <div class="col-7">
-        <img class="port-image" routerLink='/development' src="./../../assets/images/port3.jpg" alt="">
+      <div class="col-md-7 d-sm-none col-sm-12 d-md-block">
+          <img class="port-image" routerLink='/development' src="./../../assets/images/port3.jpg" alt="">
       </div>
     </div>
   </div>

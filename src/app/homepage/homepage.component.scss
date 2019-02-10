@@ -1,8 +1,8 @@
 @import '../../variables';
 
 .title {
-    max-width: 100%;
-    padding-top: 40px;
+  max-width: 100%;
+  padding-top: 40px;
 }
 
 .head {
@@ -65,7 +65,7 @@
 
 .port-text h1, .port-text-left h1{
   letter-spacing: 0.1em;
-  font-size: 4vw;
+  font-size: 60px;
   margin-bottom: 0;
 }
 
@@ -91,15 +91,15 @@
 }
 
 .sec1-button {
-  width: 30%;
+  width: 100%;
 }
 
 .content {
   height: 100px;
   overflow:hidden;
   
-  font-size: 100px;
-  line-height: 110px;
+  font-size: 80px;
+  line-height: 90px;
   color: #ecf0f1;
   
   &__container {
@@ -126,8 +126,93 @@
       animation-iteration-count: infinite;
 
       &__item {
-        font-size: 100px;
+        font-size: 90px;
         margin:0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-device-width: 1000px) {
+
+  .port-text h1, .port-text-left h1{
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-device-width: 769px) {
+
+  .port-text h1, .port-text-left h1{
+    margin-top: 20px;
+  }
+
+  .port-text {
+    text-align: left;
+  }
+
+  .textbox {
+    margin-top: 10px;
+    padding: 20px;
+    outline-color: red;
+    outline-style: solid;
+  }
+  
+  .textbox-text {
+    font-size: 20px;
+  }
+
+  .title {
+    padding-top: 20px;
+  }
+
+  .content {
+    font-size: 60px;
+    line-height: 70px;
+    &__container {
+      &__list{
+        &__item {
+          font-size: 60px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-device-width: 477px) {
+
+  .port-text h1, .port-text-left h1{
+    margin-top: 20px;
+    font-size: 45px;
+  }
+
+
+
+  .title {
+    padding-top: 15px;
+  }
+  
+  .content {
+    font-size: 40px;
+    line-height: 50px;
+    &__container {
+      &__list{
+        &__item {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-device-width: 365px) {
+  .content {
+    font-size: 30px;
+    line-height: 40px;
+    &__container {
+      &__list{
+        &__item {
+          font-size: 30px;
+        }
       }
     }
   }
