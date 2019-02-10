@@ -13,4 +13,9 @@ export class HomepageComponent implements OnInit {
   ngOnInit() {
   }
 
+  scroll() {
+    let el = document.getElementById("target");
+    el.scrollIntoView({behavior: "smooth"});
+  }
+
 }
