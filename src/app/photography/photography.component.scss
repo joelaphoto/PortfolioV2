@@ -16,11 +16,6 @@ p {
     letter-spacing: 0.1em;
 }
 
-.gallery-title {
-    text-transform: capitalize;
-    color: white;
-}
-
 .btn {
     margin-top: 20px;
     width: 100%;
@@ -51,8 +46,7 @@ ul {
 }
 
 .thumb {
-  border: 0.5% solid #eee;
-  box-shadow:#555 1px 1px 8px 1px;
+    margin-bottom: 10px;
   cursor: pointer;
   width: 100%;
 }
@@ -103,5 +97,39 @@ letter-spacing: 0.1em;
     border-radius: 10px;
     background-color: red;
     height: 100%;
+}
+
+@media only screen and (max-device-width: 1200px) {
+    .skill h1 {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-device-width: 768px) {
+    p {
+        font-size: 18px;
+    }
+
+    .skill h1 {
+        font-size: 20px;
+    }
+
+    
+    .skill-icon {
+        max-width: 75px;
+        margin-right: 10px;
+    }
+
+    ul {
+        columns: 2;
+    }
+}
+
+@media only screen and (max-device-width: 450px) {
+    .skill-icon{
+        float: unset;
+        display: block;
+        font-size: 40px;
+    }
 }
 
