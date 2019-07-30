@@ -27,7 +27,7 @@
       </p>
     </div>
     <button class="btn btn-danger sec1-button" (click)="scroll()">LEARN MORE</button>
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img class="d-block w-100" src="./../../assets/images/carousel/car1.jpg" routerLink='/photography' alt="Band">
@@ -65,22 +65,23 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
-    </div>
+    </div> -->
+    
     <div class="row port-row">
-        <div class="d-md-none d-sm-block col-sm-12">
-            <img class="port-image" src="./../../assets/images/port1.jpg" routerLink='/photography' alt="">
-          </div>
-      <div class="col-md-5 col-sm-12 port-text">
-        <h1 id="target">PHOTOGRAPHY</h1>
-        <h2>11 YEARS EXPERIENCE</h2>
-        <p>Photography is one of my most developed skills, having worked in the event and portraiture disciplines for
-          over a decade for dozens of clients.</p>
-        <button class="btn btn-danger port-button" routerLink='/photography'>VIEW PORTFOLIO</button>
-      </div>
-      <div class="col-md-7 d-md-block d-sm-none col-sm-12 hide">
-        <img class="port-image" src="./../../assets/images/port1.jpg" routerLink='/photography' alt="">
-      </div>
+      <div class="d-md-none d-sm-block col-sm-12 ">
+          <img class="port-image" src="./../../assets/images/port3.jpg" routerLink='/development' alt="">
+        </div>
+    <div class="col-md-5 port-text">
+      <h1>DEVELOPMENT</h1>
+      <h2>1 YEAR EXPERIENCE</h2>
+      <p>Coding and application development is the newest skill I’ve added to my repertoire but I’ve found I have an aptitude for learning new technologies and a desire to improve my skillset.</p>
+      <button class="btn btn-danger port-button" routerLink='/development'>VIEW PORTFOLIO</button>
     </div>
+    <div class="col-md-7 d-sm-none col-sm-12 d-md-block hide">
+        <img class="port-image" routerLink='/development' src="./../../assets/images/port3.jpg" alt="">
+    </div>
+  </div>
+
     <div class="row port-row">
       <div class="col-md-7 port-image">
         <img class="port-image" src="./../../assets/images/port2.jpg" routerLink='/design' alt="ignite">
@@ -92,19 +93,21 @@
           <button class="btn btn-danger port-button" routerLink='/design'>VIEW PORTFOLIO</button>
       </div>
     </div>
+    
     <div class="row port-row">
-        <div class="d-md-none d-sm-block col-sm-12 ">
-            <img class="port-image" src="./../../assets/images/port3.jpg" routerLink='/development' alt="">
-          </div>
-      <div class="col-md-5 port-text">
-        <h1>DEVELOPMENT</h1>
-        <h2>1 YEAR EXPERIENCE</h2>
-        <p>Coding and application development is the newest skill I’ve added to my repertoire but I’ve found I have an aptitude for learning new technologies and a desire to improve my skillset.</p>
-        <button class="btn btn-danger port-button" routerLink='/development'>VIEW PORTFOLIO</button>
-      </div>
-      <div class="col-md-7 d-sm-none col-sm-12 d-md-block hide">
-          <img class="port-image" routerLink='/development' src="./../../assets/images/port3.jpg" alt="">
-      </div>
+      <div class="d-md-none d-sm-block col-sm-12">
+          <img class="port-image" src="./../../assets/images/port1.jpg" routerLink='/photography' alt="">
+        </div>
+    <div class="col-md-5 col-sm-12 port-text">
+      <h1 id="target">PHOTOGRAPHY</h1>
+      <h2>11 YEARS EXPERIENCE</h2>
+      <p>Photography is one of my most developed skills, having worked in the event and portraiture disciplines for
+        over a decade for dozens of clients.</p>
+      <button class="btn btn-danger port-button" routerLink='/photography'>VIEW PORTFOLIO</button>
     </div>
+    <div class="col-md-7 d-md-block d-sm-none col-sm-12 hide">
+      <img class="port-image" src="./../../assets/images/port1.jpg" routerLink='/photography' alt="">
+    </div>
+  </div>
   </div>
 </div>
