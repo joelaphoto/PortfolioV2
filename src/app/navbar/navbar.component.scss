@@ -15,18 +15,21 @@
     cursor: pointer;
 }
 
-.show .nav-link {
-margin-left: 10px;
-}
-
-.show .navbar-nav {
-    background-color: rgba(0, 0, 0, 0.514);
-}
-
-.collapsing .navbar-nav {
-    background-color: rgba(0, 0, 0, 0.514);
-}
 
 .navbar-dark .navbar-toggler {
     color: rgba(255, 255, 255, 1)
+}
+
+@media only screen and (max-device-width: 990px) {
+    .nav-link {
+        padding-left: 10px;
+        }
+
+        .nav-link:hover {
+        background-color: rgba(209, 0, 0, 0.514);
+        }
+        
+        .show .navbar-nav, .collapsing .navbar-nav {
+            background-color: rgba(0, 0, 0, 0.514);
+        }
 }
