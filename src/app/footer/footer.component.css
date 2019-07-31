@@ -19,16 +19,13 @@
     margin-right: 10px;
     margin-left: 10px;
     cursor: pointer;
+    outline: none;
 }
 
-.links p:hover{
-    font-weight: bold;
+.links p:active{
+    color: rgb(187, 187, 187);
 }
 
 h5 {
     text-align: center;
-}
-
-a {
-    color: red;
 }
