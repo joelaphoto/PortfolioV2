@@ -26,6 +26,7 @@ export class DesignComponent implements OnInit {
     }
 
     function isMonths(months) {
+
       if (months < 2) {
         return " Month "
       } else {
@@ -41,7 +42,12 @@ export class DesignComponent implements OnInit {
     } else if (months >= 12) {
       const dispMonths = months % 12;
       const years = (months - dispMonths) / 12;
-      return years + isYears(years) + " " + dispMonths + isMonths(dispMonths);
+
+      if (dispMonths === 0) {
+        return years + isYears(years)
+      } else {
+        return years + isYears(years) + " " + dispMonths + isMonths(dispMonths);
+      }
     }
   }
 
