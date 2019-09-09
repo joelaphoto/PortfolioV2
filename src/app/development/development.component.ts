@@ -48,10 +48,10 @@ export class DevelopmentComponent implements OnInit {
     } else if (months >= 12) {
       const dispMonths = months % 12;
       const years = (months - dispMonths) / 12;
-      if (dispMonths > 0) {
-        return years + isYears(years) + " " + dispMonths + isMonths(dispMonths);
-      } else {
+      if (dispMonths === 0) {
         return years + isYears(years);
+      } else {
+        return years + isYears(years) + " " + dispMonths + isMonths(dispMonths);
       }
     }
   }
