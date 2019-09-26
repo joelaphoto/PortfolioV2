@@ -112,16 +112,12 @@ letter-spacing: 0.1em;
     margin-left: auto;
     margin-bottom: 20px;
 }
-
+ 
 .port-img {
-    max-height: 13vw;
-}
-
-
-.flex-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
+    background-image: url('../../assets/images/design/fsfunnels.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
 }
 
 .port-img:hover, .mobile:hover {
