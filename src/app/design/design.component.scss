@@ -114,10 +114,21 @@ letter-spacing: 0.1em;
 }
  
 .port-img {
-    background-image: url('../../assets/images/design/fsfunnels.jpg');
     background-size: cover;
     background-position: center;
     height: 300px;
+}
+
+#fsf {
+    background-image: url('../../assets/images/design/fsfunnels.jpg');
+}
+
+#aurelia {
+    background-image: url('../../assets/images/design/aurelia.jpg');
+}
+
+#bhb {
+    background-image: url('../../assets/images/design/pureBHB.jpg');
 }
 
 .port-img:hover, .mobile:hover {
