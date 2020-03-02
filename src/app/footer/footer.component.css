@@ -13,13 +13,14 @@
     margin-left: auto;
 }
 
-.links p{
+.links a{
     display: inline-block;
     text-align: center;
     margin-right: 10px;
     margin-left: 10px;
     cursor: pointer;
     outline: none;
+    color: white;
 }
 
 .links p:active{
