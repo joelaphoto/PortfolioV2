@@ -1,211 +1,99 @@
 @import '../../variables';
 
-.project-name {
-    display: inline;
-}
+.head-section {
+    .container {
+        padding-top: 60px;
+        p {
+            color: white;
+            font-size: 16px;
+            font-weight: 100;
+        }
 
-.project-img {
-    max-width: 50%;
-    float: right;
-    margin-left: 20px;
-}
+        .skill-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            
+            .skill {
+                text-align: center;
+                margin-top: 20px;
+                color: white;
+                font-family: $title-font;
+                width: 45%;
+                @media (min-width: 580px){
+                    width: 30%;
+                }
+                @media (min-width: 768px) {
+                    text-align: left;
+                }
+                @media (min-width: 990px){
+                    text-align: left;
+                    width: 266px;
+                    margin: 10 auto;
+                }
+                img.skill-icon {
+                    max-width: 50px;
+                    height: 50px;
+                    margin: 0 auto 10px auto;
+                    display: block;
+                    @media (min-width: 768px){
+                        float: left;
+                        margin-right: 10px;
+                    }
+                }
+                h1 {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    font-size: 30px;
+                    letter-spacing: 0.1em;
+                }
 
-.card {
-    margin-bottom: 10px;
-    margin-top: 10px;
-    background-color: transparent;
-}
-
-.card-title {
-    font-family: $title-font;
-}
-
-.project-desc {
-    margin-right: 10px;
-    padding-right: 10px;
-}
-
-h2 {
-    font-size: 40px;
-}
-
-.card {
-    margin-top: 10px;
-    border: none;
-    border-radius: 0;
-}
-
-.btn {
-    width: 100%;
-    font-size: 40px;
-    font-family: $title-font;
-    background-color: $primary-color;
-    border-radius: 0;
-}
-
-.btn {
-    color: white;
-    display: block;
-    background: linear-gradient(180deg, #FF0000 0%, rgba(143, 0, 0, 0.75) 100%);    
-    border-radius: 0;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.btn:hover {
-    background: linear-gradient(180deg, rgb(255, 91, 91) 0%, rgba(143, 0, 0, 0.925) 100%);    
-  }
-  
-  .btn:active {
-    background: linear-gradient(180deg, rgb(139, 0, 0) 0%, rgba(90, 0, 0, 0.438) 100%);    
-  }
-
-.image {
-  width: 100%;
-  height: 100vh;
-  perspective: 1px;
-  transform: translateZ(-1px);
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
-.container {
-    padding-top: 60px;
-}
-
-.head-section p {
-    color: white;
-    font-size: 24px;
-    font-weight: 100;
-}
-
-.title {
-    font-size: 30px;
-    font-weight: bold;
-    letter-spacing: 0.1em;
-}
-
-.thumb {
-  border: 0.5% solid #eee;
-  box-shadow:#555 1px 1px 8px 1px;
-  cursor: pointer;
-  width: 100%;
-}
-
-h2{
-  margin-bottom: 20px;
-}
-
-h4 {
-    color: white;
-}
-
-h1 {
-    color: white;
-    font-size: 48px;
-}
-
-.skill-icon {
-    float: left;
-    max-width: 100px;
-    margin-right: 10px;
-}
-
-.skill {
-    margin-top: 20px;
-    color: white;
-    font-family: $title-font;
-}
-
-.w-90 {
-    width: 90%;
-}
-
-.w-85 {
-    width: 85%;
-}
-
-.w-95 {
-    width: 95%;
-}
-
-.skill h1 {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 48px;
-letter-spacing: 0.1em;
-}
-
-.skill-bar {
-    margin-top: 10px;
-    float: left;
-    width: 100%;
-    height: 20px;
-    border-color: red;
-    border-width: 2px;
-    border-style: solid;
-    border-radius: 10px;
-}
-
-.skill-bar-inner {
-    border-radius: 10px;
-    background-color: red;
-    height: 100%;
-}
-
-p {
-    color: white;
-}
-
-@media only screen and (max-device-width: 1200px) {
-    .skill h1 {
-        font-size: 40px;
+                h3 {
+                    font-size: 18px;
+                }
+                
+            }
+        }
     }
 }
 
-@media only screen and (max-device-width: 768px) {
-    .display {
-        display: none;
-    }
-
-    p {
-        font-size: 18px;
-    }
-
-    .skill h1 {
-        font-size: 20px;
-    }
-
-    
-    .skill-icon {
-        max-width: 75px;
-        margin-right: 10px;
-    }
-
-    ul {
-        columns: 2;
-    }
-
-    h3 {
-        font-size: 20px;
-    }
-}
-
-@media only screen and (max-device-width: 450px) {
-    .skill-icon{
-        float: unset;
-        margin-right: 0px;
-        margin-left: 0px;
-        max-width: 100%;
-        display: block;
-        font-size: 40px;
+div.project-section{
+    .card {
+        color: white;
         margin-bottom: 10px;
-    }
+        margin-top: 10px;
+        background-color: transparent;
+        .card-body {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        h1.project-name {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
 
-    h3 {
-        font-size: 16px;
+        hr {
+            border: red 1px solid;
+            @media(min-width: 768px) {
+                width: 48%;
+                margin-left: unset;
+            }
+        }
+
+        h4 {
+            font-size: 18px;
+        }
+        
+        .project-img {
+            width: 100%;
+            margin-bottom: 10px;
+            @media(min-width: 768px) {
+                float: right;
+                width: 50%;
+                margin: 0 0 10px 10px;
+            } 
+        }
+
     }
 }
 
