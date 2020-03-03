@@ -1,184 +1,56 @@
 @import '../../variables';
 
-.title {
-  max-width: 100%;
-  padding-top: 40px;
-}
-
 .head {
   margin-top: 60px;
-}
-
-.content__container__text {
-    color: red !important;
-}
-
-.carousel {
-  margin-top: 40px;
-}
-
-.btn {
-    color: white;
-    display: block;
-    font-family: $title-font;
-    font-size: 36px;
-    background: linear-gradient(180deg, #FF0000 0%, rgba(143, 0, 0, 0.75) 100%);    
-    border-radius: 0;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.btn:hover {
-  background: linear-gradient(180deg, rgb(255, 91, 91) 0%, rgba(143, 0, 0, 0.925) 100%);    
-}
-
-.btn:active {
-  display: block;
-  background: linear-gradient(180deg, rgb(139, 0, 0) 0%, rgba(90, 0, 0, 0.438) 100%);    
-}
-
-.textbox {
-  margin-top: 40px;
-  padding: 20px;
-  outline-color: red;
-  outline-style: solid;
-}
-
-.textbox-text {
-  color: white;
-  font-size: 35px;
-  text-align: center;
-}
-
-.port-text {
-  color: white;
-  font-family: $title-font;
-  text-align: right;
-}
-
-.port-text-left {
-  color: white;
-  font-family: $title-font;
-}
-
-.port-text h1, .port-text-left h1{
-  letter-spacing: 0.1em;
-  font-size: 60px;
-  margin-bottom: 0;
-}
-
-.port-row {
-  margin-top: 40px;
-}
-
-.port-image {
-  max-width: 100%;
-}
-
-.port-image:hover {
-  opacity: 0.8;
-  cursor: pointer;
-}
-
-.port-image:active {
-  opacity: 0.6;
-}
-
-a {
-  text-decoration: none !important;
-  
-}
-
-.port-button {
-  width: 100%;
-}
-
-.sec1-button {
-  width: 100%;
-}
-
-.content {
-  height: 100px;
-  overflow:hidden;
-  
-  font-size: 80px;
-  line-height: 90px;
-  color: #ecf0f1;
-  
-  &__container {
-    font-weight: 100;
-    overflow: hidden;
-    line-height: 110px;
-    margin-top: -20px;
-
-    &__text {
-      display: inline;
-      margin: 0;
+  .title {
+    max-width: 100%;
+    padding-top: 40px;
+    @media only screen and (max-device-width: 769px) {
+      padding-top: 20px;
     }
+    @media only screen and (max-device-width: 477px) {
+      padding-top: 15px;
+    }
+  }
+}
 
-    &__list {
-      margin-top: 0;
-      text-align: left;
-      list-style: none;
-      
-      -webkit-animation-name: change;
-      -webkit-animation-duration: 10s;
-      -webkit-animation-iteration-count: infinite;
-      animation-name: change;
-      animation-duration: 10s;
-      animation-iteration-count: infinite;
-
-      &__item {
-        font-size: 90px;
-        margin:0;
+div.sec1 {
+  .row {
+    margin-top: 40px;
+    .port-image {
+      max-width: 100%;
+      &:hover {
+        cursor: pointer;
       }
     }
-  }
-}
-
-@media only screen and (max-device-width: 1000px) {
-
-  .port-text h1, .port-text-left h1{
-    font-size: 50px;
-  }
-}
-
-@media only screen and (max-device-width: 769px) {
-
-  .port-text h1, .port-text-left h1{
-    margin-top: 20px;
-  }
-
-  .port-text {
-    text-align: left;
-  }
-
-  .textbox {
-    margin-top: 10px;
-    padding: 20px;
-    outline-color: red;
-    outline-style: solid;
-  }
-  
-  .textbox-text {
-    font-size: 20px;
-  }
-
-  .title {
-    padding-top: 20px;
-  }
-
-  .content {
-    font-size: 60px;
-    line-height: 70px;
-    &__container {
-      &__list{
-        &__item {
-          font-size: 60px;
+    .port-text {
+      color: white;
+      font-family: $title-font;
+      text-align: left;
+      &.left{
+        text-align: left;
+      }
+      @media(min-width: 768px) {
+        text-align: right;
+      }
+      h1{
+        letter-spacing: 0.1em;
+        font-size: 60px;
+        margin-bottom: 0;
+        @media only screen and (max-device-width: 477px) {
+          margin-top: 20px;
+          font-size: 45px;
+        }
+        @media only screen and (max-device-width: 769px) {
+          margin-top: 20px;
+        }
+        @media only screen and (max-device-width: 1000px) {
+          font-size: 50px;
         }
       }
+    }
+    .btn {
+      font-family: "roboto-condensed", "sans-serif";
     }
   }
 }
@@ -188,117 +60,3 @@ a {
    display: none;
  }
 }
-
-@media only screen and (max-device-width: 477px) {
-
-  .port-text h1, .port-text-left h1{
-    margin-top: 20px;
-    font-size: 45px;
-  }
-
-
-
-  .title {
-    padding-top: 15px;
-  }
-  
-  .content {
-    font-size: 40px;
-    line-height: 50px;
-    &__container {
-      &__list{
-        &__item {
-          font-size: 40px;
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (max-device-width: 365px) {
-  .content {
-    font-size: 30px;
-    line-height: 40px;
-    &__container {
-      &__list{
-        &__item {
-          font-size: 30px;
-        }
-      }
-    }
-  }
-}
-
-@-webkit-keyframes opacity {
-  0%, 100% {opacity:0;}
-  50% {opacity:1;}
-}
-
-@-webkit-keyframes change {
-  0%, 12.66%, 100% {transform:translate3d(0,0,0);}
-  16.66%, 29.32% {transform:translate3d(0,-25%,0);}
-  33.32%,45.98% {transform:translate3d(0,-50%,0);}
-  49.98%,62.64% {transform:translate3d(0,-75%,0);}
-  66.64%,79.3% {transform:translate3d(0,-50%,0);}
-  83.3%,95.96% {transform:translate3d(0,-25%,0);}
-}
-
-@-o-keyframes opacity {
-  0%, 100% {opacity:0;}
-  50% {opacity:1;}
-}
-
-@-o-keyframes change {
-  0%, 12.66%, 100% {transform:translate3d(0,0,0);}
-  16.66%, 29.32% {transform:translate3d(0,-25%,0);}
-  33.32%,45.98% {transform:translate3d(0,-50%,0);}
-  49.98%,62.64% {transform:translate3d(0,-75%,0);}
-  66.64%,79.3% {transform:translate3d(0,-50%,0);}
-  83.3%,95.96% {transform:translate3d(0,-25%,0);}
-}
-
-@-moz-keyframes opacity {
-  0%, 100% {opacity:0;}
-  50% {opacity:1;}
-}
-
-@-moz-keyframes change {
-  0%, 12.66%, 100% {transform:translate3d(0,0,0);}
-  16.66%, 29.32% {transform:translate3d(0,-25%,0);}
-  33.32%,45.98% {transform:translate3d(0,-50%,0);}
-  49.98%,62.64% {transform:translate3d(0,-75%,0);}
-  66.64%,79.3% {transform:translate3d(0,-50%,0);}
-  83.3%,95.96% {transform:translate3d(0,-25%,0);}
-}
-
-@keyframes opacity {
-  0%, 100% {opacity:0;}
-  50% {opacity:1;}
-}
-
-@keyframes change {
-  0%, 12.66%, 100% {transform:translate3d(0,0,0);}
-  16.66%, 29.32% {transform:translate3d(0,-25%,0);}
-  33.32%,45.98% {transform:translate3d(0,-50%,0);}
-  49.98%,62.64% {transform:translate3d(0,-75%,0);}
-  66.64%,79.3% {transform:translate3d(0,-50%,0);}
-  83.3%,95.96% {transform:translate3d(0,-25%,0);}
-}
-
-// 6 is the number of animation.
-// Here, there are 4 lines :
-
-// 1 to 2
-// 2 to 3
-// 3 to 4
-// 4 to 3
-// 3 to 2
-// 2 to 1
-
-// 6x + 6y = 100 (100% duration)
-
-// HERE : 
-// y = 4 -> Animation between two lines
-// x = 12.66 -> Time spent on a line
-
-// You can define a value and calculate the other if you want change speed or the number of lines
