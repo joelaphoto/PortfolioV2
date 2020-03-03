@@ -9,11 +9,16 @@ import { Project } from '../models/project.model';
   providers: [ProjectService]
 })
 export class AddProjectComponent implements OnInit {
-
   constructor(private projectService: ProjectService) { }
 
   ngOnInit() {
+    this.viewing = false;
+  }
+  
+  viewing: boolean;
 
+  toggleView() {
+    this.viewing = !this.viewing;
   }
 
   submitProject(name: string, date: string, shortDesc: string, longDesc: string, link: string, imgUrl: string, liveLink: string) {

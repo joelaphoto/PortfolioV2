@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectService } from '../services/project.service';
 import { FirebaseListObservable } from 'angularfire2/database';
+import { AuthenticationService } from '../services/authentication.service';
+import { Observable } from 'rxjs/Observable';
 import { Router } from '@angular/router';
- 
+
 
 @Component({
   selector: 'app-Development',
@@ -12,11 +14,13 @@ import { Router } from '@angular/router';
 })
 export class DevelopmentComponent implements OnInit {
   projects: FirebaseListObservable<any[]>;
+  user: Observable<firebase.User>
 
-  constructor(private projectService: ProjectService, private router: Router) { }
+  constructor(private authService: AuthenticationService,private projectService: ProjectService, private router: Router) { }
 
   ngOnInit() {
     this.projects = this.projectService.getProjects();
+    this.user = this.authService.authUser();
   }
 
   calulateMonths(dateString) {

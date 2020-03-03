@@ -69,7 +69,9 @@
 
 <div class="project-section">
   <div class="container">
-    <div *ngFor="let project of projects | async">
+    <app-add-project *ngIf='(user|async)?.uid'></app-add-project>
+
+    <div *ngFor="let project of projects | async | reverse">
       <div class="card">
         <div class="card-body">
           <a href="{{project.link}}">

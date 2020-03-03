@@ -29,6 +29,7 @@ import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { ContactComponent } from './contact/contact.component';
 import { DesignComponent } from './design/design.component';
 import { FooterComponent } from './footer/footer.component';
+import { ReversePipe } from './app.reverse';
 
 export const firebaseConfig = {
   apiKey: config.apiKey,
@@ -54,6 +55,7 @@ export const firebaseConfig = {
     VirtualBtsComponent,
     ContactComponent,
     DesignComponent,
+    ReversePipe,
     FooterComponent
   ],
   imports: [
