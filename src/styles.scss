@@ -1,7 +1,9 @@
 @import 'variables';
 
 body {
-    background-image: url(assets/images/dark-triangles.png) 
+    background-image: url(assets/images/dark-triangles.png);
+    background-attachment: fixed;
+    background-position: center;
 }
 
 p {
