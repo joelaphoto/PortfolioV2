@@ -6,8 +6,8 @@
 <div class="sec1">
   <div class="container">
     <div class="row">
-      <div class="col-md-7 port-image">
-        <img class="port-image" src="./../../assets/images/port3.jpg" routerLink='/development' alt="">
+      <div class="col-md-7 port-image " id="development">
+        <app-slideshow [slideshowName]="(gallery1)" [numberOfSlides]="(limit1)"></app-slideshow>
       </div>
       <div class="col-md-5 col-sm-12 port-text left">
         <h1>DEVELOPMENT</h1>
@@ -19,11 +19,11 @@
     </div>
 
     <div class="row">
-      <div class="d-md-none d-sm-block col-sm-12">
-        <a href="https://www.joeladamsphotography.com"><img class="port-image" src="./../../assets/images/port1.jpg"
-            alt=""></a>
+      <div class="col-md-7 port-image" id="photography">
+        <app-slideshow [slideshowName]="(gallery2)" [numberOfSlides]="(limit2)"></app-slideshow>
+
       </div>
-      <div class="col-md-5 col-sm-12 port-text">
+      <div class="col-md-5 col-sm-12 port-text left">
         <h1 id="target">PHOTOGRAPHY</h1>
         <h2>{{calulateYears("01 September 2007 00:00:00 GMT")}} Experience</h2>
         <p>Photography is one of my most developed skills, having worked in the event and portraiture disciplines for
@@ -31,15 +31,11 @@
         <a href="https://www.joeladamsphotography.com"><button class="btn btn-danger port-button">View
             Portfolio</button></a>
       </div>
-      <div class="col-md-7 d-md-block d-sm-none col-sm-12 hide">
-        <a href="https://www.joeladamsphotography.com"><img class="port-image" src="./../../assets/images/port1.jpg"
-            alt=""></a>
-      </div>
     </div>
 
     <div class="row">
-      <div class="col-md-7 port-image">
-        <img class="port-image" src="../../assets/images/design/pureBHB.jpg" routerLink='/design' alt="">
+      <div class="col-md-7 port-image" id="design">
+        <app-slideshow [slideshowName]="(gallery3)" [numberOfSlides]="(limit3)"></app-slideshow>
       </div>
       <div class="col-md-5 col-sm-12 port-text left">
         <h1>Design</h1>

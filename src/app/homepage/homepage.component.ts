@@ -9,6 +9,14 @@ import { Component, OnInit } from '@angular/core';
 export class HomepageComponent implements OnInit {
 
   constructor() { }
+  gallery1 = "development";
+  gallery2 = "photography";
+  gallery3 = "design";
+
+  limit1= 4;
+  limit2= 4;
+  limit3= 5;
+
 
   ngOnInit() {
   }

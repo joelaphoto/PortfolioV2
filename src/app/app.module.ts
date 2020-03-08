@@ -30,6 +30,7 @@ import { ContactComponent } from './contact/contact.component';
 import { DesignComponent } from './design/design.component';
 import { FooterComponent } from './footer/footer.component';
 import { ReversePipe } from './app.reverse';
+import { SlideshowComponent } from './slideshow/slideshow.component';
 
 export const firebaseConfig = {
   apiKey: config.apiKey,
@@ -57,6 +58,7 @@ export const firebaseConfig = {
     DesignComponent,
     ReversePipe,
     FooterComponent,
+    SlideshowComponent,
   ],
   imports: [
     BrowserModule,

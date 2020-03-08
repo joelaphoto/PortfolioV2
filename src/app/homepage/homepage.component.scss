@@ -16,44 +16,55 @@
 
 div.sec1 {
   padding-bottom: 60px;
-  .row {
-    margin-top: 40px;
-    .port-image {
-      width: 100%;
-      &:hover {
-        cursor: pointer;
+  .container {
+    & .row:nth-child(2) {
+      @media (min-width: 768px) {
+        .port-image{
+          order: 2;
+        }
       }
     }
-    .port-text {
-      color: white;
-      font-family: $title-font;
-      text-align: left;
-      &.left{
+    .row {
+      margin-top: 40px;
+      .port-image {
+        width: 100%;
+        height: 300px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .port-text {
+        color: white;
+        font-family: $title-font;
         text-align: left;
-      }
-      @media(min-width: 768px) {
-        text-align: right;
-      }
-      h1{
-        letter-spacing: 0.1em;
-        font-size: 60px;
-        margin-bottom: 0;
-        @media only screen and (max-device-width: 477px) {
-          margin-top: 20px;
-          font-size: 45px;
+        &.left{
+          text-align: left;
         }
-        @media only screen and (max-device-width: 769px) {
-          margin-top: 20px;
+        @media(min-width: 768px) {
+          text-align: right;
         }
-        @media only screen and (max-device-width: 1000px) {
-          font-size: 50px;
+        h1{
+          letter-spacing: 0.1em;
+          font-size: 60px;
+          margin-bottom: 0;
+          @media only screen and (max-device-width: 477px) {
+            margin-top: 20px;
+            font-size: 45px;
+          }
+          @media only screen and (max-device-width: 769px) {
+            margin-top: 20px;
+          }
+          @media only screen and (max-device-width: 1000px) {
+            font-size: 50px;
+          }
         }
       }
-    }
-    .btn {
-      font-family: "roboto-condensed", "sans-serif";
+      .btn {
+        font-family: "roboto-condensed", "sans-serif";
+      }
     }
   }
+
 }
 
 @media only screen and (max-device-width: 575px) {
