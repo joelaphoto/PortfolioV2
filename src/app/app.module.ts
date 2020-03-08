@@ -56,7 +56,7 @@ export const firebaseConfig = {
     ContactComponent,
     DesignComponent,
     ReversePipe,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
