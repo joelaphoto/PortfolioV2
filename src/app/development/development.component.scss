@@ -66,6 +66,7 @@ div.project-section{
         background-color: transparent;
         font-family: $body-font;
 
+
         @media(min-width: 768px) {
             &:nth-child(even) {
                 div.image {
@@ -79,8 +80,20 @@ div.project-section{
                 }
             }
         }
+        .image {
+            padding: 0;
+            .project-img {
+                width: 100%;
+                margin-bottom: 10px;
+                @media(min-width: 768px) {
+                    float: right;
+                } 
+            }
+        }
 
-        .text a img {
+
+        .text {
+            a img {
             max-width: 30px;
             float: right;
             position: relative;
@@ -100,14 +113,7 @@ div.project-section{
         h4 {
             font-size: 18px;
         }
-        
-        .project-img {
-            width: 100%;
-            margin-bottom: 10px;
-            @media(min-width: 768px) {
-                float: right;
-            } 
-        }
+    }
 
     }
 }

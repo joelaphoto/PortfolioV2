@@ -61,9 +61,11 @@
 
 .portfolio-section {
     color: white;
+
     .row {
         font-family: $body-font;
         margin-top: 30px;
+
         hr {
             border: red 1px solid;
         }
@@ -101,7 +103,23 @@
         }
         h1 {
             font-size: 30px;
-            margin-top: -7px;
+            margin-top: 10px;
+            @media(min-width: 768px) {
+                margin-top: -7px;
+            }
+        }
+
+        button {
+            margin-top: 5px;
+        }
+    }
+
+    @media(min-width: 768px) {
+        .container .row:nth-child(even){
+            text-align: right;
+            div.port-img {
+                order: 2;
+            }
         }
     }
 }
