@@ -19,6 +19,7 @@ div.sec1 {
   .container {
     & .row:nth-child(2) {
       @media (min-width: 768px) {
+        text-align: left;
         .port-image{
           order: 2;
         }
@@ -26,6 +27,11 @@ div.sec1 {
     }
     .row {
       margin-top: 40px;
+        hr {
+          border: red 1px solid;
+          width: 100%;
+          margin-top: 5px;
+        }
       .port-image {
         width: 100%;
         height: 300px;

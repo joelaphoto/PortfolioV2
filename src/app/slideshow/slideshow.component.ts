@@ -34,7 +34,7 @@ export class SlideshowComponent implements OnInit {
 
     preload()
 
-    jquery("div#" + this.slideshowName + " div.bg.active").css('background-image', 'url(../../assets/images/slideshow/' + this.slideshowName + '/img-1-min.jpg)');
+    jquery("div#" + this.slideshowName + " div.bg.active").css('background-image', 'url(' + imagePath + 'img-1-min.jpg)');
 
     function isChanging() {
       changing = !changing

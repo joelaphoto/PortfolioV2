@@ -60,26 +60,41 @@
 }
 
 div.project-section{
-    .card {
+    .project {
         color: white;
-        margin-bottom: 10px;
-        margin-top: 10px;
+        margin: 20px 0;
         background-color: transparent;
-        .card-body {
-            padding-left: 0px;
-            padding-right: 0px;
+        font-family: $body-font;
+
+        @media(min-width: 768px) {
+            &:nth-child(even) {
+                div.image {
+                    order: 1;
+                }
+                div.text {
+                    text-align: right;
+                    a img {
+                        float: left;
+                    }
+                }
+            }
         }
+
+        .text a img {
+            max-width: 30px;
+            float: right;
+            position: relative;
+            bottom: 40px;
+        }
+
         h1.project-name {
             font-size: 30px;
             margin-bottom: 10px;
+
         }
 
         hr {
             border: red 1px solid;
-            @media(min-width: 768px) {
-                width: 48%;
-                margin-left: unset;
-            }
         }
 
         h4 {
@@ -91,8 +106,6 @@ div.project-section{
             margin-bottom: 10px;
             @media(min-width: 768px) {
                 float: right;
-                width: 50%;
-                margin: 0 0 10px 10px;
             } 
         }
 

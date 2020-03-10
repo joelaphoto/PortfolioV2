@@ -66,22 +66,21 @@
 <div class="project-section">
   <div class="container">
     <app-add-project *ngIf='(user|async)?.uid'></app-add-project>
-
-    <div *ngFor="let project of projects | async | reverse">
-      <div class="card">
-        <div class="card-body">
-          <a href="{{project.link}}">
-            <img class="project-img" src="{{project.imgUrl}}" alt="{{project.name}}">
-          </a>
-          <h1 class="project-name">{{project.name}}</h1>
+    <div class="project row" *ngFor="let project of projects | async | reverse">
+      <div class="col-lg-5 col-md-6 col-sm-12 image">
+        <a href="{{project.link}}">
+          <img class="project-img" src="{{project.imgUrl}}" alt="{{project.name}}">
+        </a>
+      </div>
+      <div class="col-lg-7 col-md-6 col-sm-12 text">
+        <h1 class="project-name">{{project.name}}</h1>
+        <a href="{{project.link}}" target="_blank"><img src="../../assets/images/icons/git-white.png" alt="View on Github" title="View on Github"></a>
           <hr>
-          <h4>{{changeDate(project.date)}}</h4>
           <p>
             <em>{{project.shortDesc}}</em>
           </p>
           <p class="project-desc">{{project.longDesc}}</p>
-          <a class="btn btn-danger" href="{{project.link}}" target="_blank">View on Github</a>
-        </div>
+          
       </div>
     </div>
   </div>
