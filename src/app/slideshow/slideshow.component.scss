@@ -3,7 +3,10 @@ div.index {
     width: 100%;
     div.controls {
         display: flex;
-        margin-top: 150px;
+        margin-top: 110px;
+        @media(min-width: 768px) {
+            margin-top: 150px;
+        }
         justify-content: space-between;
         div.ctrl-right img, div.ctrl-left img{
             opacity: 0.35;
