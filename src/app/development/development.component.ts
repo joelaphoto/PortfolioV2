@@ -4,6 +4,8 @@ import { FirebaseListObservable } from 'angularfire2/database';
 import { AuthenticationService } from '../services/authentication.service';
 import { Observable } from 'rxjs/Observable';
 import { Router } from '@angular/router';
+import * as jquery from 'jquery';
+import { Project } from '../models/project.model';
 
 
 @Component({
@@ -13,14 +15,46 @@ import { Router } from '@angular/router';
   providers: [ProjectService]
 })
 export class DevelopmentComponent implements OnInit {
-  projects: FirebaseListObservable<any[]>;
+  projects: Project[];
   user: Observable<firebase.User>
+  imagesLoaded: number;
+  imagesLoadedPercentage: number;
 
   constructor(private authService: AuthenticationService,private projectService: ProjectService, private router: Router) { }
 
   ngOnInit() {
-    this.projects = this.projectService.getProjects();
+    this.imagesLoaded = 0;
+    this.projectService.getProjects().subscribe(data => {
+      this.projects = data;
+      console.log(this.projects.length)
+      var $animation_elements = jquery('.row');
+      var $window = jquery(window);
+      $window.on('scroll', check_if_in_view);
+      $window.on('scroll resize', check_if_in_view);
+      $window.trigger('scroll');
+
+      function check_if_in_view() {
+        var window_height = $window.height();
+        var window_top_position = $window.scrollTop();
+        var window_bottom_position = (window_top_position + window_height);
+      
+        jquery.each($animation_elements, function() {
+          var $element = jquery(this);
+          var element_height = $element.outerHeight();
+          var element_top_position = $element.offset().top;
+          var element_bottom_position = (element_top_position + element_height);
+      
+          //check to see if this current container is within viewport
+          if ((element_bottom_position >= window_top_position) &&
+              (element_top_position <= window_bottom_position)) {
+            $element.addClass('in-view');
+          } 
+        });
+      }
+    });;
     this.user = this.authService.authUser();
+
+    
   }
 
   calulateMonths(dateString) {
@@ -66,5 +100,20 @@ export class DevelopmentComponent implements OnInit {
     const day = dateString.slice(8,10)
     const formattedString = 'Start Date: ' + month + '/' + day + '/' + year;
     return formattedString
+  }
+
+  isLoaded() {
+    console.log("loaded")
+    if(this.imagesLoaded === this.projects.length - 1) {
+      console.log("fully loaded")
+      this.imagesLoadedPercentage = 100;
+      jquery('div.loader').fadeOut(800, function() {
+        jquery('div.container').css('opacity', '1');
+
+      });
+    } else {
+      this.imagesLoaded = this.imagesLoaded + 1;
+      this.imagesLoadedPercentage = this.imagesLoaded / this.projects.length * 100;
+    }
   }
 }
