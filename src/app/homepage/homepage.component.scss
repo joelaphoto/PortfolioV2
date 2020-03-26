@@ -17,15 +17,10 @@
 div.sec1 {
   padding-bottom: 60px;
   .container {
-    & .row:nth-child(2) {
-      @media (min-width: 768px) {
-        text-align: left;
-        .port-image{
-          order: 2;
-        }
-      }
-    }
+
     .row {
+      position: relative;
+      transition: all 1s;
       margin: 40px 0 0 0;
         hr {
           border: red 1px solid;
@@ -64,9 +59,28 @@ div.sec1 {
             font-size: 50px;
           }
         }
+
       }
       .btn {
         font-family: "roboto-condensed", "sans-serif";
+      }
+      &.slide-right {
+        left: 100vw;
+        &.in-view {
+          left: 0;
+        }
+      }
+    }
+    & .row.slide-left {
+      right: 100vw;
+      @media (min-width: 768px) {
+        text-align: left;
+        .port-image{
+          order: 2;
+        }
+      }
+      &.in-view {
+        right: 0;
       }
     }
   }

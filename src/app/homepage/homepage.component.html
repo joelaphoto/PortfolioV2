@@ -5,7 +5,7 @@
 </div>
 <div class="sec1">
   <div class="container">
-    <div class="row">
+    <div class="row slide-right">
       <div class="col-md-7 port-image " id="development">
         <app-slideshow [slideshowName]="(gallery1)" [numberOfSlides]="(limit1)"></app-slideshow>
       </div>
@@ -19,13 +19,13 @@
       </div>
     </div>
 
-    <div class="row">
+    <div class="row slide-left">
       <div class="col-md-7 port-image" id="photography">
         <app-slideshow [slideshowName]="(gallery2)" [numberOfSlides]="(limit2)"></app-slideshow>
 
       </div>
       <div class="col-md-5 col-sm-12 port-text">
-        <h1 id="target">PHOTOGRAPHY</h1>
+        <h1>PHOTOGRAPHY</h1>
         <hr>
         <h2>{{calulateYears("01 September 2007 00:00:00 GMT")}} Experience</h2>
         <p>Photography is one of my most developed skills, having worked in the event and portraiture disciplines for
@@ -35,7 +35,7 @@
       </div>
     </div>
 
-    <div class="row">
+    <div class="row slide-right">
       <div class="col-md-7 port-image" id="design">
         <app-slideshow [slideshowName]="(gallery3)" [numberOfSlides]="(limit3)"></app-slideshow>
       </div>
