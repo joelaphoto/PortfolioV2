@@ -73,6 +73,9 @@
             background-size: cover;
             background-position: center;
             height: 250px;
+            @media(min-width: 768px) {
+                height: 350px;
+            }
             &:hover{
                 opacity: 0.8;
                 cursor: pointer;
