@@ -124,45 +124,47 @@ div.container {
     transition: opacity 0.5s ease-in;
 }
 
-div.row:nth-child(even){
-    opacity: 0;
-    -moz-transition: all 500ms linear;
-    -webkit-transition: all 500ms linear;
-    -o-transition: all 500ms linear;
-    transition: all 500ms linear;
-    -moz-transform: translate3d(-200px, 0px, 0px);
-    -webkit-transform: translate3d(-200px, 0px, 0px);
-    -o-transform: translate(-200px, 0px);
-    -ms-transform: translate(-200px, 0px);
-    transform: translate3d(-200px, 0px, 0px);
-    &.in-view {
-      opacity: 1;
-      -moz-transform: translate3d(0px, 0px, 0px);
-      -webkit-transform: translate3d(0px, 0px, 0px);
-      -o-transform: translate(0px, 0px);
-      -ms-transform: translate(0px, 0px);
-      transform: translate3d(0px, 0px, 0px);
+div.row {
+    &:nth-child(even){
+        opacity: 0;
+        -moz-transition: all 500ms linear;
+        -webkit-transition: all 500ms linear;
+        -o-transition: all 500ms linear;
+        transition: all 500ms linear;
+        -moz-transform: translate3d(-200px, 0px, 0px);
+        -webkit-transform: translate3d(-200px, 0px, 0px);
+        -o-transform: translate(-200px, 0px);
+        -ms-transform: translate(-200px, 0px);
+        transform: translate3d(-200px, 0px, 0px);
+        &.in-view {
+        opacity: 1;
+        -moz-transform: translate3d(0px, 0px, 0px);
+        -webkit-transform: translate3d(0px, 0px, 0px);
+        -o-transform: translate(0px, 0px);
+        -ms-transform: translate(0px, 0px);
+        transform: translate3d(0px, 0px, 0px);
+        }
     }
-}
 
-div.row:nth-child(odd){
-    opacity: 0;
-    -moz-transition: all 500ms linear;
-    -webkit-transition: all 500ms linear;
-    -o-transition: all 500ms linear;
-    transition: all 500ms linear;
-    -moz-transform: translate3d(200px, 0px, 0px);
-    -webkit-transform: translate3d(200px, 0px, 0px);
-    -o-transform: translate(200px, 0px);
-    -ms-transform: translate(200px, 0px);
-    transform: translate3d(200px, 0px, 0px);
-    &.in-view {
-      opacity: 1;
-      -moz-transform: translate3d(0px, 0px, 0px);
-      -webkit-transform: translate3d(0px, 0px, 0px);
-      -o-transform: translate(0px, 0px);
-      -ms-transform: translate(0px, 0px);
-      transform: translate3d(0px, 0px, 0px);
+    &:nth-child(odd){
+        opacity: 0;
+        -moz-transition: all 500ms linear;
+        -webkit-transition: all 500ms linear;
+        -o-transition: all 500ms linear;
+        transition: all 500ms linear;
+        -moz-transform: translate3d(200px, 0px, 0px);
+        -webkit-transform: translate3d(200px, 0px, 0px);
+        -o-transform: translate(200px, 0px);
+        -ms-transform: translate(200px, 0px);
+        transform: translate3d(200px, 0px, 0px);
+        &.in-view {
+          opacity: 1;
+          -moz-transform: translate3d(0px, 0px, 0px);
+          -webkit-transform: translate3d(0px, 0px, 0px);
+          -o-transform: translate(0px, 0px);
+          -ms-transform: translate(0px, 0px);
+          transform: translate3d(0px, 0px, 0px);
+        }
     }
 }
 
