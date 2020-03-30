@@ -22,9 +22,12 @@ export class HomepageComponent implements OnInit {
   ngOnInit() {
     var $animation_elements = jquery('.row');
     var $window = jquery(window);
-    $window.on('scroll', check_if_in_view);
-    $window.on('scroll resize', check_if_in_view);
-    $window.trigger('scroll');
+    jquery('.loader').delay(300).fadeOut(800, () => {
+      $window.on('scroll', check_if_in_view);
+      $window.on('scroll resize', check_if_in_view);
+      $window.trigger('scroll');
+  
+    })
 
 
     function check_if_in_view() {
