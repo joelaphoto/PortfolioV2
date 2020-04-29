@@ -27,7 +27,7 @@
     "firebase": "^3.6.6",
     "firebase-tools": "^6.2.2",
     "g": "^2.0.1",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "node-sass": "^4.13.1",
     "rxjs": "^5.5.12",
     "zone.js": "^0.8.19"
